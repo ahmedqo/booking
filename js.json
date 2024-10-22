@@ -1,0 +1,243 @@
+{
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Morocco Adventure City",
+    "url": "http://127.0.0.1:8000",
+    "logo": "http://127.0.0.1:8000/img/logo.png",
+    "sameAs": ["https://www.facebook.com/moroccoadventurecity", "https://www.instagram.com/moroccoadventurecity", "https://twitter.com/moroccoadventurecity"],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "(+212) 662-015485",
+        "contactType": "Customer Service",
+        "areaServed": "MA",
+        "availableLanguage": ["English", "French", "Arabic"]
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "contact@moroccoadventurecity.com",
+        "addressLocality": "Marrakech",
+        "addressRegion": "Marrakech-Safi",
+        "postalCode": "40000",
+        "addressCountry": "MA"
+    },
+    "description": "Discover an excursion to the cities of Zagora, Merzouga, and other magnificent locations, and spend three nights in the Sahara Desert, located in the southwest of Morocco.",
+    "foundingDate": "2010",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.6295,
+        "longitude": -7.9811
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "currenciesAccepted": "MAD, USD, EUR",
+    "offers": [{
+            "@type": "OfferCatalog",
+            "name": "Excursions",
+            "itemListElement": [{
+                    "@type": "Offer",
+                    "name": "Ouzoud Trip",
+                    "url": "http://127.0.0.1:8000/excursions/the-ouzoud-falls",
+                    "priceCurrency": "EUR",
+                    "price": "20",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a trip to Ouzoud promises a refreshing escape into nature to witness one of Morocco's most spectacular waterfalls"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Zagoura Excursions",
+                    "url": "http://127.0.0.1:8000/excursions/zagoura-trip",
+                    "priceCurrency": "EUR",
+                    "price": "65",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Traveling from Marrakech to Zagoura offers an opportunity to experience the stunning landscapes of Morocco's desert region"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Merzouga Excursions",
+                    "url": "http://127.0.0.1:8000/excursions/merzouga-trip",
+                    "priceCurrency": "EUR",
+                    "price": "85",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on an excursion to Merzouga from Marrakech promises an unforgettable adventure through landscapes of Morocco's Sahara Desert"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Merzouga &amp; Zagoura",
+                    "url": "http://127.0.0.1:8000/excursions/zagoura-and-merzouga-trip",
+                    "priceCurrency": "EUR",
+                    "price": "145",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Combining visits to both Merzouga and Zagoura offers a exploration of Morocco's desert"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Excursion to Essaouira",
+                    "url": "http://127.0.0.1:8000/excursions/a-day-in-essaouira",
+                    "priceCurrency": "EUR",
+                    "price": "20",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "The port city of Essaouira, Discover the medina, the beach, the port, the souks, craft galleries"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Excursion to Ourika",
+                    "url": "http://127.0.0.1:8000/excursions/a-day-in-ourika",
+                    "priceCurrency": "EUR",
+                    "price": "15",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "The Ourika Valley attracts tourists looking for green space and an exceptional landscape"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Historical Visit",
+                    "url": "http://127.0.0.1:8000/excursions/marrakech-historical-visit",
+                    "priceCurrency": "EUR",
+                    "price": "10",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Visiting Marrakech for its historical sites is an excellent! is steeped in history and culture"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Majorelle &amp; Souks",
+                    "url": "http://127.0.0.1:8000/excursions/majorelle-gardens-and-souks",
+                    "priceCurrency": "EUR",
+                    "price": "20",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Exploring the Majorelle Gardens and the bustling souks of Marrakech"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Ouarzazate Trip",
+                    "url": "http://127.0.0.1:8000/excursions/ouarzazate-trip",
+                    "priceCurrency": "EUR",
+                    "price": "30",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a trip to Ouarzazate promises a captivating journey through Morocco's"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "CHEZ ALI Trip",
+                    "url": "http://127.0.0.1:8000/excursions/chez-ali-trip",
+                    "priceCurrency": "EUR",
+                    "price": "45",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Enjoy a magical night in the ambiance of One Thousand and One Nights at the Chez Ali complex on the outskirts of Marrakech"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Quad Ride",
+                    "url": "http://127.0.0.1:8000/excursions/a-quad-biking-day",
+                    "priceCurrency": "EUR",
+                    "price": "30",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a quad biking adventure in the desert can be an exhilarating experience, offering a unique way to explore the rugged terrain"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Buggy Ride",
+                    "url": "http://127.0.0.1:8000/excursions/buggy-ride",
+                    "priceCurrency": "EUR",
+                    "price": "90",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a buggy ride adventure offers an exciting and exhilarating way to explore the Moroccan countryside, desert terrain"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Camel Ride",
+                    "url": "http://127.0.0.1:8000/excursions/a-camel-biking-day",
+                    "priceCurrency": "EUR",
+                    "price": "20",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a camel ride through the palm grove near Marrakech offers a serene and scenic way to explore the lush oasis landscape"
+                }
+            ]
+        },
+        {
+            "@type": "OfferCatalog",
+            "name": "Private Excursions",
+            "itemListElement": [{
+                    "@type": "Offer",
+                    "name": "Ouzoud Trip",
+                    "url": "http://127.0.0.1:8000/private-excursions/the-ouzoud-falls",
+                    "priceCurrency": "EUR",
+                    "price": "150",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a trip to Ouzoud promises a refreshing escape into nature to witness one of Morocco's most spectacular waterfalls"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Zagoura Excursions",
+                    "url": "http://127.0.0.1:8000/private-excursions/zagoura-trip",
+                    "priceCurrency": "EUR",
+                    "price": "280",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Traveling from Marrakech to Zagoura offers an opportunity to experience the stunning landscapes of Morocco's desert region"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Merzouga Excursions",
+                    "url": "http://127.0.0.1:8000/private-excursions/merzouga-trip",
+                    "priceCurrency": "EUR",
+                    "price": "450",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on an excursion to Merzouga from Marrakech promises an unforgettable adventure through landscapes of Morocco's Sahara Desert"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Merzouga &amp; Zagoura",
+                    "url": "http://127.0.0.1:8000/private-excursions/zagoura-and-merzouga-trip",
+                    "priceCurrency": "EUR",
+                    "price": "600",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Combining visits to both Merzouga and Zagoura offers a exploration of Morocco's desert"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Excursion to Essaouira",
+                    "url": "http://127.0.0.1:8000/private-excursions/a-day-in-essaouira",
+                    "priceCurrency": "EUR",
+                    "price": "150",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "The port city of Essaouira, Discover the medina, the beach, the port, the souks, craft galleries"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Excursion to Ourika",
+                    "url": "http://127.0.0.1:8000/private-excursions/a-day-in-ourika",
+                    "priceCurrency": "EUR",
+                    "price": "90",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "The Ourika Valley attracts tourists looking for green space and an exceptional landscape"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Ouarzazate Trip",
+                    "url": "http://127.0.0.1:8000/private-excursions/ouarzazate-trip",
+                    "priceCurrency": "EUR",
+                    "price": "160",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-10-19T00:02:51+00:00",
+                    "description": "Embarking on a trip to Ouarzazate promises a captivating journey through Morocco's"
+                }
+            ]
+        }
+    ]
+}
