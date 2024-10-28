@@ -87,14 +87,14 @@
                 <li class="flex flex-col border border-x-light rounded-x-thin overflow-hidden">
                     <img src="{{ $trip->image }}" alt="{{ pathinfo($trip->image, PATHINFO_FILENAME) }}"
                         class="aspect-video object-cover object-center" loading="lazy" />
-                    <div class="flex flex-col gap-4 p-4">
+                    <div class="flex flex-col gap-4 p-4 flex-1">
                         <h3 class="font-x-thin text-2xl lg:text-3xl text-center text-x-prime">
                             {{ $trip->title }}
                         </h3>
                         <p class="font-normal text-x-black text-base text-justify">
                             {{ $trip->desc }}...
                         </p>
-                        <div class="flex flex-wrap justify-between items-end">
+                        <div class="flex mt-auto flex-wrap justify-between items-end">
                             <div class="w-max">
                                 <span class="font-x-thin text-2xl lg:text-3xl text-x-prime">
                                     {{ $trip->price }} €

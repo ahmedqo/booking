@@ -1,8 +1,116 @@
 @extends('shared.guest.base')
-@section('title', ucwords(__('the ouzoud falls')) . ' | ' . __('Morocco Adventure City'))
-@php
-    Core::$route = 1;
-@endphp
+@section('title',
+    ucwords(__('Experience Full-Day Tour of the ouzoud waterfalls')) .
+    ' | ' .
+    __('Morocco Adventure
+    City'))
+    @php
+        Core::$route = 1;
+    @endphp
+@section('meta')
+    <!-- Meta Descriptions -->
+    <meta name="description" content="{!! __(
+        'Escape Marrakech on a full-day trip to Ouzoud Waterfalls. Explore nature, spot wildlife, and enjoy a traditional Tajine, with convenient hotel pick-up.',
+    ) !!}">
+    <meta property="og:description" content="{!! __(
+        'Escape Marrakech on a full-day trip to Ouzoud Waterfalls. Explore nature, spot wildlife, and enjoy a traditional Tajine, with convenient hotel pick-up.',
+    ) !!}">
+    <meta name="twitter:description" content="{!! __(
+        'Escape Marrakech on a full-day trip to Ouzoud Waterfalls. Explore nature, spot wildlife, and enjoy a traditional Tajine, with convenient hotel pick-up.',
+    ) !!}">
+
+    <!-- Meta Titles -->
+    <meta property="og:title" content="{{ __('Morocco Adventure City') }}">
+    <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
+
+    <!-- Meta Images -->
+    <meta property="og:image" content="{{ asset('img/ouzoud/ouzoud-3.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/ouzoud/ouzoud-3.webp') }}">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Ouzoud Waterfalls Day Trip from Marrakech",
+      "description": "Escape Marrakech on a full-day trip to the breathtaking Ouzoud Waterfalls. Explore nature, spot wildlife, and enjoy a traditional Moroccan meal. The excursion includes hotel pick-up and free cancellation.",
+      "image": [
+        "{{ asset('img/ouzoud/ouzoud-1.webp') }}",
+        "{{ asset('img/ouzoud/ouzoud-2.webp') }}",
+        "{{ asset('img/ouzoud/ouzoud-3.webp') }}"
+      ],
+      "touristType": "Nature Lovers, Families, Adventurers",
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Pick-up from Marrakech",
+            "description": "Pick-up between 8:00 AM & 9:00 AM from your hotel or Riad in Marrakech."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Journey to Ouzoud Falls",
+            "description": "Enjoy a scenic 3-hour drive through traditional Berber villages and olive groves."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Explore Ouzoud Falls",
+            "description": "Arrive at the Ouzoud Waterfalls and spend around four hours exploring. Swim in the natural pools, hike the trails, and admire the local wildlife, including Barbary macaques."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Traditional Moroccan Meal",
+            "description": "Savor an authentic Moroccan Tajine at a local restaurant near the falls."
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Return to Marrakech",
+            "description": "Head back to Marrakech in the late afternoon, arriving around 8:00 PM, just in time for sunset."
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "20.00",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "{{ now()->toIso8601String() }}",
+        "url": "{{ route('views.excursions.ouzoud') }}",
+        "description": "Book your full-day trip to Ouzoud Falls from Marrakech, including hotel pick-up, scenic views, and a traditional Moroccan meal."
+      },
+      "provider": {
+        "@type": "TouristInformationCenter",
+        "name": "Morocco Adventure City",
+        "url": "{{ route('views.guest.index')  }}",
+        "logo": "{{ asset('img/logo.png') }}",
+        "sameAs": [
+          "https://www.facebook.com/moroccoadventurecity",
+          "https://www.instagram.com/moroccoadventurecity",
+          "https://twitter.com/moroccoadventurecity"
+        ],
+        "telephone": "{{ env('APP_PHONE_NUMBER') }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ env('APP_EMAIL_ADDRESS') }}",
+          "addressLocality": "Marrakech",
+          "addressRegion": "Marrakech-Safi",
+          "postalCode": "40000",
+          "addressCountry": "MA"
+        }
+      },
+      "duration": "PT10H",
+      "startDate": "{{ now()->toIso8601String() }}",
+      "endDate": "{{ now()->addDays(1)->toIso8601String() }}"
+    }
+    </script>
+@endsection
+
 @section('content')
     @include('shared.guest.topbar', [
         'title' => __('the ouzoud falls'),
@@ -48,13 +156,13 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Duration: 1 day'),
-                                __('Pick-up between 8:00 AM & 9:00 AM, depending on the location of your hotel'),
-                                __('Return at 7:00 PM'),
-                                __('Immediate confirmation'),
+                                __('Duration: Full day (1 day)'),
+                                __('Pick-up: between 8:00 AM & 9:00 AM, depending on the location of your hotel'),
+                                __('Return Time: Approximately 7:00 PM'),
+                                __('Confirmation: Immediate booking confirmation.'),
                                 __(
-                                    'Pick-up at your hotel or Riad in Marrakech. If your Riad is located in the Medina, pick-up will be arranged at an accessible location, as close as possible to your Riad or hotel'),
-                                __('Free cancellation'),
+                                    'Direct pick-up at your hotel or Riad in Marrakech. If your Riad is located in the Medina, pick-up will be arranged at an accessible location, as close as possible to your Riad or hotel'),
+                                __('Cancellation: 100% Free cancellation available'),
                             ],
                         ])
                     </div>
@@ -66,11 +174,13 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Discover the magnificent region of Ouzoud and its untouched nature'),
+                                __(
+                                    'Discover and explore the magnificent region of Ouzoud and its pristine natural beauty'),
                                 __(
                                     'Contemplate the Ouzoud waterfalls, the most spectacular waterfalls in North Africa'),
                                 __('Admire the monkeys and birds that inhabit the area'),
-                                __('Enjoy a traditional Tajine in one of the local restaurants'),
+                                __(
+                                    'Enjoy a traditional Tajine in one of the local restaurants  for an authentic taste of Morocco'),
                             ],
                         ])
                     </div>
@@ -82,14 +192,19 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
                             <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Discover the Ouzoud Waterfalls from Marrakech: An Unforgettable Adventure')) }}
+                                {{ ucwords(__('Discover the Ouzoud Waterfalls from Marrakech: Embark on a Guaranteed Unforgettable Trip')) }}
                             </h3>
+                            <div class="flex flex-col gap-2">
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('A day trip to the Ouzoud Waterfalls is a perfect escape from the busy streets of Marrakech. Located around 150 kilometers away, the falls offer you a peaceful and scenic retreat into the Moroccan countryside, complete with stunning natural views, wildlife, and local cuisine.')) }}
+                                </p>
+                            </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Early Morning Departure from Marrakech')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your journey begins early, around 8 o\'clock in the morning, from bustling Marrakech. You\'re about to traverse approximately 150 kilometers through Morocco, providing a glimpse into life in many traditional villages and towns of the country.')) }}
+                                    {{ ucfirst(__('Your trip starts early, leaving Marrakech around 8 a.m. The journey to Ouzoud Falls takes you through traditional villages and towns, giving you a glimpse of rural Moroccan life. The scenic drive of about three hours offers plenty to see as you pass olive groves, winding roads, and Berber settlements.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
@@ -97,15 +212,16 @@
                                     {{ ucwords(__('Arrival at the Ouzoud Waterfalls')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After approximately three hours of picturesque drive, you\'ll reach the majestic Ouzoud Waterfalls. This marks the beginning of exploring this natural treasure. You have 4 hours to immerse yourself in the surrounding beauty. Let yourself be charmed by the playful monkeys and birds inhabiting the area. You also have the opportunity to refresh yourself by swimming or simply relax while enjoying a coffee by the waterfalls.')) }}
+                                    {{ ucfirst(__('After the journey, you\'ll arrive at the breathtaking Ouzoud Waterfalls, standing over 100 meters high. You\'ll have around four hours to explore the area. There\'s plenty to do from walking around the falls to swimming in the pools at the base. You\'ll also likely encounter the famous Ouzoud Falls monkeys, a group of Barbary macaques that roam the area. They are friendly and often approach visitors, making for a memorable wildlife experience.')) }}
                                 </p>
+
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('A Gourmet Break')) }}
+                                    {{ ucwords(__('Enjoy a Traditional Moroccan Meal Break')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The region is full of small traditional restaurants, where you can enjoy a delicious tagine while admiring the breathtaking landscapes. The local flavors will take you on an unforgettable culinary journey.')) }}
+                                    {{ ucfirst(__('After exploring, you’ll probably be hungry. Luckily, there are a few small restaurants near the ouzoud cascades where to some mouthwatering Moroccan dishesthat will make your taste buds pop with every bite. Think tagine, couscous, and fresh salads authentic and hearty dishes to refuel you for the rest of your day.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
@@ -113,10 +229,10 @@
                                     {{ ucwords(__('Return to Marrakech in Beauty')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After a peaceful and relaxing day in the heart of the Ouzoud Waterfalls, it will be time to return to Marrakech. You can enjoy the last rays of the sun as you return around 8 p.m.')) }}
+                                    {{ ucfirst(__('After a peaceful afternoon at Ouzoud Falls, it’s time to make your way back to Marrakech. You’ll head out in the late afternoon and arrive by 8 p.m., just in time to catch the final rays of the setting sun.')) }}
                                 </p>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The excursion to the Ouzoud Waterfalls from Marrakech promises an unforgettable experience, blending nature, culture, and gastronomy. Book today and embark on a journey to discover this Moroccan marvel.')) }}
+                                    {{ ucfirst(__('The excursion to the Ouzoud Waterfalls from Marrakech promises an unforgettable experience, blending nature, culture, and gastronomy. Ouzoud Waterfalls has something for everyone. Book your Ouzoud Falls day trip today for an unforgettable experience outside the city.')) }}
                                 </p>
                             </div>
                         </div>

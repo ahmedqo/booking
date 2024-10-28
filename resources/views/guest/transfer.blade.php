@@ -1,15 +1,19 @@
 @extends('shared.guest.base')
-@section('title', ucwords(__('the airport of marrakech')) . ' | ' . __('Morocco Adventure City'))
+@section('title',
+    ucwords(__('Private Marrakech Airport Transfer: 24/7 Service')) .
+    ' | ' .
+    __('Morocco Adventure
+    City'))
 
 @section('meta')
     <meta name="description" content="{!! __(
-        'Explore convenient transfer services in Morocco, offering reliable transportation solutions between popular destinations, including airports and cities.',
+        'Book a private transfer to or from Marrakech Airport. Secure, comfortable, and available 24/7 with no extra charges for flight delays.',
     ) !!}">
     <meta property="og:description" content="{!! __(
-        'Explore convenient transfer services in Morocco, offering reliable transportation solutions between popular destinations, including airports and cities.',
+        'Book a private transfer to or from Marrakech Airport. Secure, comfortable, and available 24/7 with no extra charges for flight delays.',
     ) !!}">
     <meta name="twitter:description" content="{!! __(
-        'Explore convenient transfer services in Morocco, offering reliable transportation solutions between popular destinations, including airports and cities.',
+        'Book a private transfer to or from Marrakech Airport. Secure, comfortable, and available 24/7 with no extra charges for flight delays.',
     ) !!}">
 
     <meta property="og:title" content="{{ ucwords(__('the airport of marrakech')) . ' | ' . __('Morocco Adventure City') }}">
@@ -19,42 +23,62 @@
     <meta name="twitter:image" content="{{ asset('img/transfers/transfer-1.webp') }}">
 
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "{{ __('Transfers') }}",
-            "url": "{{ route('views.guest.transfer') }}",
-            "description": "{!! __('Explore convenient transfer services in Morocco, offering reliable transportation solutions between popular destinations, including airports and cities.') !!}",
-            "publisher": {
-                "@type": "Organization",
-                "name": "Morocco Adventure City",
-                "url": "{{ route('views.guest.index') }}",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "{{ asset('img/logo.png') }}"
-                }
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "{{ env('APP_PHONE_NUMBER') }}",
-                "contactType": "Customer Service",
-                "areaServed": "MA",
-                "availableLanguage": ["English", "French", "Arabic"]
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "{{ env('APP_EMAIL_ADDRESS') }}",
-                "addressLocality": "Marrakech",
-                "addressRegion": "Marrakech-Safi",
-                "postalCode": "40000",
-                "addressCountry": "MA"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 31.6295,
-                "longitude": -7.9811
-            }
-        }
+      {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Private Marrakech Airport Transfer: 24/7 Service",
+  "description": "Book a private transfer to or from Marrakech Airport. Secure, comfortable, and available 24/7 with no extra charges for flight delays.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Morocco Adventure City",
+    "url": "https://example.com", 
+    "logo": "https://example.com/img/logo.webp"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Marrakech"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://example.com/reservation",
+      "priceCurrency": "EUR",
+      "price": "20",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 1,
+        "maxValue": 6
+      },
+      "description": "Private transfer for 1-6 persons",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-10-26"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://example.com/reservation",
+      "priceCurrency": "EUR",
+      "price": "40",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 7,
+        "maxValue": 17
+      },
+      "description": "Private transfer for 7-17 persons",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-10-26"
+    }
+  ],
+  "additionalType": "https://schema.org/TransferService",
+  "category": "Airport Transfer",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceLocation": {
+      "@type": "Place",
+      "name": "Marrakech Airport"
+    }
+  }
+}
+
     </script>
 @endsection
 
@@ -63,7 +87,7 @@
 @endphp
 @section('content')
     @include('shared.guest.topbar', [
-        'title' => __('Transfer in private from or to the airport of Marrakech'),
+        'title' => __('Private Transfer To or From Marrakech Airport'),
         'start' => [route('views.guest.index'), __('Home')],
         'end' => __('airport of Marrakech'),
     ])
@@ -80,7 +104,7 @@
                         ],
                     ])
                     <p class="text-x-black font-x-thin text-lg">
-                        {{ __('Enjoy a private transfer from or to the airport of Marrakech.') }}
+                        {{ __('Enjoy a comfortable and private transfer service between Marrakech Airport and your destination.') }}
                     </p>
                 </div>
                 <div class="flex lg:hidden flex-col gap-6">
@@ -109,10 +133,11 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Transfer from Marrakech airport to your distination or vice versa'),
-                                __('Availability: 24h / 24h'),
-                                __('Travel time: Between 20 to 30 Min'),
-                                __('Free cancellation'),
+                                __(
+                                    'Private transfer between Marrakech airport and your destination (or vice versa)'),
+                                __('Availability: 24/7 service'),
+                                __('Duration: 20 to 30 minutes'),
+                                __('Free cancellation available'),
                             ],
                         ])
                     </div>
@@ -124,10 +149,10 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Enjoy a secure and comfortable private transfer'),
-                                __('Avoid waiting for a taxi'),
-                                __('No extra charge if your flight is delayed'),
-                                __('Availability 24h / 24h'),
+                                __('Enjoy a safe, comfortable, and private transfer'),
+                                __('Skip the wait for a taxi'),
+                                __('No extra charges for flight delays'),
+                                __('24/7 availability for all your travel needs'),
                             ],
                         ])
                     </div>

@@ -74,7 +74,7 @@
                     {{ ucwords(__('welcome to morocco adventure city')) }}
                 </h2>
                 <p class="font-normal text-x-black text-lg lg:text-xl text-justify">
-                    {{ __('Our tourist visits agency in marrakech is a leader in the industry, offering a comprehensive range of travel services to meet all our clients needs. With a dedicated team of travel experts and strong partnerships with leading travel in Marrakech and surrounding regions, we are committed to delivering exceptional experiences to every traveler.') }}
+                    {{ __('Our travel agency in Marrakech is a leader in the industry, offering a comprehensive range of travel services to meet all our clients needs. As one of the best travel agencies in Marrakech, we have a dedicated team of travel experts and strong partnerships with top providers in Marrakech and surrounding regions. We are committed to delivering exceptional experiences to every traveler, ensuring that your visit to Morocco is unforgettable.') }}
                 </p>
             </div>
             <div>

@@ -1,15 +1,15 @@
 @extends('shared.guest.base')
-@section('title', __('Morocco Adventure City'))
+@section('title', __('Top morocco Excursions & tours to Merzouga, Zagora, Essaouira & More'))
 
 @section('meta')
     <meta name="description" content="{!! __(
-        'Discover an excursion to the cities of Zagora, Merzouga, and other magnificent locations, and spend three nights in the Sahara Desert, located in the southwest of Morocco.',
+        'Discover top Morocco tours and excursions from Marrakech, including desert adventures to Merzouga, Zagora, Ouzoud, and more. Book your unforgettable tour today!',
     ) !!}">
     <meta property="og:description" content="{!! __(
-        'Discover an excursion to the cities of Zagora, Merzouga, and other magnificent locations, and spend three nights in the Sahara Desert, located in the southwest of Morocco.',
+        'Discover top Morocco tours and excursions from Marrakech, including desert adventures to Merzouga, Zagora, Ouzoud, and more. Book your unforgettable tour today!',
     ) !!}">
     <meta name="twitter:description" content="{!! __(
-        'Discover an excursion to the cities of Zagora, Merzouga, and other magnificent locations, and spend three nights in the Sahara Desert, located in the southwest of Morocco.',
+        'Discover top Morocco tours and excursions from Marrakech, including desert adventures to Merzouga, Zagora, Ouzoud, and more. Book your unforgettable tour today!',
     ) !!}">
 
     <meta property="og:title" content="{{ __('Morocco Adventure City') }}">
@@ -112,7 +112,7 @@
                             {{ ucwords(__('Morocco Adventure City')) }}
                         </h1>
                         <p class="font-normal text-x-white text-lg lg:text-xl text-center">
-                            {{ __('Discover an excursion to the cities of Zagora, Merzouga, and other magnificent locations, and spend three nights in the Sahara Desert, located in the southwest of Morocco.') }}
+                            {{ __('Experience the best of Morocco with private and shared excursions from the heart of the city marrakech to Zagora, Merzouga, Essaouira and beyond. Explore stunning landscapes and enjoy an unforgettable desert adventure in the heart of the Sahara.') }}
                         </p>
                         <a href="{{ route('views.guest.excursion') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">
@@ -149,7 +149,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-x-thin text-x-black text-center">
-                                {{ ucwords(__('The best value for money')) }}
+                                {{ ucwords(__('Best Value for Money')) }}
                             </h3>
                         </li>
                         <li class="flex flex-col gap-4">
@@ -242,7 +242,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-x-thin text-x-black text-center">
-                                {{ ucwords(__('Best travel guide')) }}
+                                {{ ucwords(__('Expert And Friendly Guides')) }}
                             </h3>
                         </li>
                         <li class="flex flex-col gap-4">
@@ -272,7 +272,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-x-thin text-x-black text-center">
-                                {{ ucwords(__('Best support 24/7')) }}
+                                {{ ucwords(__('24/7 Support')) }}
                             </h3>
                         </li>
                         <li class="flex flex-col gap-4">
@@ -293,7 +293,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-x-thin text-x-black text-center">
-                                {{ ucwords(__('Best accomodation')) }}
+                                {{ ucwords(__('Top accomodation')) }}
                             </h3>
                         </li>
                     </ul>
@@ -309,7 +309,7 @@
                 <div class="absolute w-full h-full inset-0 bg-x-black bg-opacity-30 flex items-center justify-center p-4">
                     <div class="flex flex-col items-center gap-1">
                         <h3 class="text-2xl font-x-thin text-x-white text-center">
-                            {{ ucwords(__('Sahara Excursions')) }}
+                            {{ ucwords(__('Explore the Sahara: Unforgettable Desert Journeys Await!')) }}
                         </h3>
                         <a href="{{ route('views.excursions.ouarzazate') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">
@@ -325,7 +325,7 @@
                 <div class="absolute w-full h-full inset-0 bg-x-black bg-opacity-30 flex items-center justify-center p-4">
                     <div class="flex flex-col items-center gap-1">
                         <h3 class="text-2xl font-x-thin text-x-white text-center">
-                            {{ ucwords(__('Ourika Valley')) }}
+                            {{ ucwords(__('Discover the Beauty of Ourika Valley: A Nature Escape!')) }}
                         </h3>
                         <a href="{{ route('views.excursions.ourika') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">
@@ -341,7 +341,7 @@
                 <div class="absolute w-full h-full inset-0 bg-x-black bg-opacity-30 flex items-center justify-center p-4">
                     <div class="flex flex-col items-center gap-1">
                         <h3 class="text-2xl font-x-thin text-x-white text-center">
-                            {{ ucwords(__('Dinner Show')) }}
+                            {{ ucwords(__('Savor & Enjoy: Dinner with a Spectacular Show!')) }}
                         </h3>
                         <a href="{{ route('views.excursions.ali') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">
@@ -357,7 +357,7 @@
                 <div class="absolute w-full h-full inset-0 bg-x-black bg-opacity-30 flex items-center justify-center p-4">
                     <div class="flex flex-col items-center gap-1">
                         <h3 class="text-2xl font-x-thin text-x-white text-center">
-                            {{ ucwords(__('Adventure')) }}
+                            {{ ucwords(__('Chase The Adventure!')) }}
                         </h3>
                         <a href="{{ route('views.excursions.quad') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">
@@ -372,7 +372,7 @@
                 <div class="absolute w-full h-full inset-0 bg-x-black bg-opacity-30 flex items-center justify-center p-4">
                     <div class="flex flex-col items-center gap-1">
                         <h3 class="text-2xl font-x-thin text-x-white text-center">
-                            {{ ucwords(__('Family & Private')) }}
+                            {{ ucwords(__('Tailored for You: Family & Private Excursions!')) }}
                         </h3>
                         <a href="{{ route('views.guest.private') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">
@@ -387,7 +387,7 @@
                 <div class="absolute w-full h-full inset-0 bg-x-black bg-opacity-30 flex items-center justify-center p-4">
                     <div class="flex flex-col items-center gap-1">
                         <h3 class="text-2xl font-x-thin text-x-white text-center">
-                            {{ ucwords(__('Transfer')) }}
+                            {{ ucwords(__('Hassle-Free Transfers: Comfort & Convenience!')) }}
                         </h3>
                         <a href="{{ route('views.guest.transfer') }}"
                             class="flex w-max text-x-white font-x-huge text-base p-2 border-b-2 border-b-x-prime">

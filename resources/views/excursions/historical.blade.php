@@ -1,8 +1,124 @@
 @extends('shared.guest.base')
-@section('title', ucwords(__('marrakech historical visit')) . ' | ' . __('Morocco Adventure City'))
+@section('title', ucwords(__('4-Hour Marrakech Historical Tour: Palaces, Tombs & Souks')))
 @php
     Core::$route = 1;
 @endphp
+
+@section('meta')
+    <!-- Meta Descriptions -->
+    <meta name="description" content="{!! __(
+        'Discover Marrakech\'s rich history with visits to Koutoubia Mosque, Bahia Palace, Saadian Tombs, the Mellah, and vibrant Souks on this 4-hour guided tour.',
+    ) !!}">
+    <meta property="og:description" content="{!! __(
+        'Discover Marrakech\'s rich history with visits to Koutoubia Mosque, Bahia Palace, Saadian Tombs, the Mellah, and vibrant Souks on this 4-hour guided tour.',
+    ) !!}">
+    <meta name="twitter:description" content="{!! __(
+        'Discover Marrakech\'s rich history with visits to Koutoubia Mosque, Bahia Palace, Saadian Tombs, the Mellah, and vibrant Souks on this 4-hour guided tour.',
+    ) !!}">
+    <!-- Meta Titles -->
+    <meta property="og:title" content="{{ __('Morocco Adventure City') }}">
+    <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
+
+    <!-- Meta Images -->
+    <meta property="og:image" content="{{ asset('img/historical/historical-1.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/historical/historical-1.webp') }}">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Marrakech Historical Tour: Palaces, Tombs & Souks",
+  "description": "Explore the rich history of Marrakech with visits to the Koutoubia Mosque, Bahia Palace, Saadian Tombs, Mellah, and vibrant souks on this 4-hour guided tour.",
+  "image": [
+    "{{ asset('img/marrakech/marrakech-1.webp') }}",
+    "{{ asset('img/marrakech/marrakech-2.webp') }}",
+    "{{ asset('img/marrakech/marrakech-3.webp') }}"
+  ],
+  "touristType": "Culture Enthusiasts, History Buffs, Families",
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Pick-up from Marrakech",
+        "description": "Pick-up from your hotel or Riad in Marrakech between 9:00 AM and 10:00 AM."
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Visit to Koutoubia Mosque",
+        "description": "Admire the exterior of the Koutoubia Mosque, one of Marrakech's most iconic landmarks."
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Visit to Mellah",
+        "description": "Explore the Mellah, Marrakech's historical Jewish Quarter."
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Visit to Saadian Tombs",
+        "description": "Visit the Saadian Tombs, a resting place of Morocco’s past royalty."
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Visit to Bahia Palace",
+        "description": "Discover the stunning Bahia Palace with its intricate architecture and lush gardens."
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Explore the Souks",
+        "description": "Walk through the vibrant souks of Marrakech, where artisans sell their crafts."
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Return to Marrakech",
+        "description": "End your historical tour and return to your hotel by 1:00 PM or 6:00 PM, depending on your chosen time slot."
+      }
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "30.00",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "{{ now()->toIso8601String() }}",
+    "url": "{{ route('views.guest.excursion') }}",
+    "description": "Book your 4-hour Marrakech Historical Tour and discover the Koutoubia Mosque, Bahia Palace, Saadian Tombs, and more."
+  },
+  "provider": {
+    "@type": "TouristInformationCenter",
+    "name": "Morocco Adventure City",
+    "url": "{{ route('views.guest.index') }}",
+    "logo": "{{ asset('img/logo.png') }}",
+    "sameAs": [
+      "https://www.facebook.com/moroccoadventurecity",
+      "https://www.instagram.com/moroccoadventurecity",
+      "https://twitter.com/moroccoadventurecity"
+    ],
+    "telephone": "{{ env('APP_PHONE_NUMBER') }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ env('APP_EMAIL_ADDRESS') }}",
+      "addressLocality": "Marrakech",
+      "addressRegion": "Marrakech-Safi",
+      "postalCode": "40000",
+      "addressCountry": "MA"
+    }
+  },
+  "duration": "PT4H",
+  "startDate": "{{ now()->toIso8601String() }}",
+  "endDate": "{{ now()->addHours(4)->toIso8601String() }}"
+}
+</script>
+
+@endsection
+
+
 @section('content')
     @include('shared.guest.topbar', [
         'title' => __('marrakech historical visit'),
@@ -50,11 +166,11 @@
                         @include('shared.guest.list', [
                             'list' => [
                                 __('Duration: 4 hours'),
-                                __('Morning visit: 9:00 AM – 1:00 PM'),
-                                __('Afternoon visit: 2:00 PM – 6:00 PM'),
-                                __('Tour conducted by an official guide'),
-                                __('Pick-up from your hotel or Riad in Marrakech'),
-                                __('Free cancellation'),
+                                __('Morning Tour: 9:00 AM – 1:00 PM'),
+                                __('Afternoon Tour: 2:00 PM – 6:00 PM'),
+                                __('Guided Tour: Led by an official, knowledgeable guide'),
+                                __('Pick-up: From your hotel or Riad in Marrakech'),
+                                __('Cancellation: Free cancellation available'),
                             ],
                         ])
                     </div>
@@ -66,11 +182,14 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Visit to the Koutoubia Mosque'),
-                                __('Visit to the Mellah, the old Jewish Quarter'),
-                                __('Visit to the Saadian Tombs'),
-                                __('Visit to the Bahia Palace'),
-                                __('Visit to the Souks'),
+                                __(
+                                    'Explore the Koutoubia Mosque, an architectural gem and iconic landmark of Marrakech.'),
+                                __(
+                                    'Discover the Mellah, the historic Jewish Quarter rich in culture and heritage.'),
+                                __('Visit the fascinating Saadian Tombs, dating back to the 16th century.'),
+                                __('Wander through the stunning Bahia Palace, showcasing Moroccan opulence.'),
+                                __(
+                                    'Dive into the vibrant atmosphere of the Souks, filled with local crafts and treasures.'),
                             ],
                         ])
                     </div>
@@ -83,28 +202,91 @@
                         <div class="flex flex-col gap-6">
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-black">
-                                    {{ ucwords(__('Have a wonderful day exploring the history of Marrakech.')) }}
+                                    {{ ucwords(__('Unveiling the Rich History of Marrakech: A Journey Through Time.')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Behind its red ramparts, Marrakech holds some of the most incredible treasures imaginable.')) }}
+                                    {{ ucfirst(__('Marrakech, the "Red City," is a place that merges history, culture, and architectural beauty together. The red walls of the main street give away a long list of historical landmarks whose stories will give you a glimpse of the Moroccan colorful history. If you\'re looking to explore Marrakech historical places and delve into the cultural heritage of Marrakech, this city won\'t disappoint.')) }}
                                 </p>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Enriched by trade in gold, ivory, and precious woods from Africa, it showcases its wealth through the harmony of a medieval setting. You won\'t be able to resist the secret charm of its impressive medina. On the agenda: visiting the main monuments that bear witness to the history of the ochre city.')) }}
+                                    {{ ucfirst(__('It has everything from ancient mosques to grand palaces, and all the locations in the city have something unique to tell. Let us go together and explore the history of the places in Marrakech, where the old monuments and buildings of Marrakech still stand as proof of the rich old history of the city.')) }}
                                 </p>
+
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('The Koutoubia Mosque: A Masterpiece of Islamic Architecture.')) }}
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The Koutoubia Mosque, with its minaret, is a jewel of Muslim architecture. This tower, towering 77 meters high, dominates the city of Essaouira. Built by the Almohad dynasty, it has only two rivals: the Giralda in Seville and the Hassan Tower in Rabat, both of which are also the work of the Almohads. It can be seen from more than 25 km away from the city.')) }}
+                                    {{ ucfirst(
+                                        __(
+                                            'One of the most significant Marrakech landmarks is the Koutoubia Mosque. This beautiful minaret is 77 meters high and overlooks the town from 25 km away. The Almohad dynasty built the mosque in the 12th century, a remarkable piece of Islamic architecture. Its magnificence can be compared to the creations of Almohads like the Giralda in Seville and the Hassan Tower in Rabat. The Koutoubia Mosque has been a symbol of Marrakech\'s religious and cultural heritage for centuries, and every visitor to the city admires its beauty.',
+                                        ),
+                                    ) }}
                                 </p>
+
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Bahia Palace: A Resplendent Jewel of Marrakech.')) }}
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The Bahia Palace is one of the most beautiful and richest palaces in Morocco, deserving the name "resplendent palace." Built by Ba Ahmed, son of Si Mussa, the grand vizier of Sidi Muhammad ben Abd er-Rahman, it was constructed towards the end of the 19th century. The building, almost entirely on the ground floor with only one apartment on the first floor (the menzeh), extends over eight hectares and is surrounded by splendid gardens perfumed by the many essences it contains.')) }}
+                                    {{ ucfirst(
+                                        __(
+                                            'Take a step into the magnificent Bahia Palace, one of the best historical buildings in the city, and you will be transported back in time. Built in the late 1800s by Ba Ahmed, the Prime Minister of Sultan Sidi Muhammad, the palace is a true representation of the name that stands for brilliance and glory. Covering eight hectares, this luxurious mansion features elaborately decorated courtyards, stunning gardens, and detailed woodwork. Walking around the area of the Bahia Palace, you will seem as if you are in the days of Moroccan royalty.',
+                                        ),
+                                    ) }}
                                 </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('The Historic Djamaa El-Fna Square: The Epicenter of Marrakech.')) }}
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The Djamaa El-Fna square is more than just a square; it\'s a myth that must be seen, experienced, listened to, and felt. It alone constitutes a destination, a capital within the capital, a place that has nothing to envy to other European or American squares, to those other magical places where, at least once in a lifetime, one must have been.')) }}
+                                    {{ ucfirst(
+                                        __(
+                                            'Those who go to Marrakech should not skip the iconic Djamaa El-Fna square. It is not just a public place but a real symbol of the vibrant heritage of Marrakech. With its colorful square, this lively cultural migrant center is where people from all walks of life come together to enjoy performances by snake charmers, storytellers, and musicians. As the sun sets, the square becomes a buzzing food market, so make sure you come here to have a fun experience and an unforgettable time.',
+                                        ),
+                                    ) }}
                                 </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('The Saadian Tombs: A Hidden Gem of History.')) }}
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The Saadian Tombs are one of the most evocative places in the city. From the Casbah Mosque, through a narrow alley, one can reach the tombs dating back to the 16th century. They were discovered and could only be visited since 1917. Indeed, the Alawite sultan Moulay Ismail had a wall built, a century after their creation, to conceal them.')) }}
+                                    {{ ucfirst(
+                                        __(
+                                            'Behind the walls of the Casbah Mosque is the Saadian Tombs, a legendary historical site with a beguiling past. Rich in history, they speak of the 16th century and were covered from view for a long time until their rediscovery in 1917. Sultan Moulay Ismail of the Alawite dynasty buried them here, and anytime you visit, you will see that they are preserved remarkably and will show you the glory of the Saadian dynasty.',
+                                        ),
+                                    ) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Why Marrakech is a Must-Visit for History Lovers.')) }}
+                                </h4>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(
+                                        __(
+                                            'Marrakech is not just a city but a living museum that is full of past stories. You’ll get to see the Koutoubia Mosque, walk along the Bahia Palace, or look in awe at the Saadian Tombs when you visit Marrakech where there are lots of historical places that will transport you to its cultural past.',
+                                        ),
+                                    ) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Ready to Explore Marrakech’s Historical Treasures?')) }}
+                                </h4>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(
+                                        __(
+                                            'If you\'re eager to dive into the rich history of Marrakech, now is the time to embark on a journey like no other. At Moroccan Adventure City, we offer expertly guided tours to explore the city\'s most iconic historical landmarks. Book your tour today and let us take you on a memorable trip through the heart of Marrakech\'s past. Whether you\'re fascinated by historical monuments, intrigued by cultural heritage, or simply love exploring new places, Marrakech is waiting for you!',
+                                        ),
+                                    ) }}
                                 </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

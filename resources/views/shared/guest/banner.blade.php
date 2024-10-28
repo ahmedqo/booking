@@ -3,10 +3,10 @@
     <div class="container mx-auto px-4 py-8">
         <div class="flex flex-col gap-4 items-center">
             <h2 class="font-x-thin text-x-white text-3xl lg:text-5xl text-center">
-                {{ ucwords(__('Discover Our Excursions & Services.')) }}
+                {{ ucwords(__('Discover Our Excursions & Tours Services.')) }}
             </h2>
-            <p class="font-normal text-x-white text-lg lg:text-xl text-center">
-                {{ __('Explore the delights of Marrakech, where history, culture, and beauty converge in a dazzling blend of colors, flavors, and traditions.') }}
+            <p class="font-normal text-x-white text-lg lg:text-xl text-center lg:w-9/12">
+                {{ __('Immerse yourself in the wonders of Marrakech, where history, culture, and beauty blend in a vibrant display of colors, flavors, and traditions.') }}
             </p>
             <button id="player" src="{{ asset('video/player.mp4') }}?v={{ env('APP_VERSION') }}"
                 class="w-20 h-20 relative isolate rounded-full border-2 border-x-prime mt-6 flex items-center justify-center">
