@@ -3,7 +3,7 @@
         <td style="padding: 64px 16px;">
             <div style="width: 100%; max-width: 500px; margin: auto;">
                 <a href="{{ route('views.guest.index') }}" aria-label="home_page_link"
-                    style="width: 160px; max-width: 100%; display: block; text-decoration: unset; margin: auto;">
+                    style="width: 160px; max-width: 100%; display: block; text-decoration: unset; margin: auto; margin-bottom: 16px">
                     <img src="{{ asset('img/logo.png') }}?v={{ env('APP_VERSION') }}"
                         style="width: 100%; display: block;" />
                 </a>
