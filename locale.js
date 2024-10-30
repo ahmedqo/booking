@@ -27,12 +27,9 @@ const readFiles = (dir, fileList = []) => {
 
 // Function to extract text between __('')
 const extractText = (content) => {
-    // ’
-    const regex = /__\(\s*['"`]((?:[^'"`]|\\['"`]|"(?:[^"\\]|\\.)*")*?)['"`]\s*,?\s*\)/g ///__\(\s*['"`]((?:[^'"`]|\\['"`]|"(?:[^"\\]|\\.)*")*?)['"`]\s*\)/g;
+    const regex = /__\(\s*['"`]((?:[^'"`]|\\['"`]|"(?:[^"\\]|\\.)*")*?)['"`]\s*,?\s*\)/g;
     const matches = content.matchAll(regex);
-
     const params = Array.from(matches, match => match[1]);
-
     return params;
 };
 
@@ -46,6 +43,7 @@ const extractTextFromFiles = (dir, js) => {
         const matches = extractText(content);
         if (matches.length) {
             result[file] = matches;
+            matches.forEach(dd => console.log(`found: "${dd}" in ${file}`));
         }
     });
 
@@ -69,6 +67,7 @@ function main() {
     });
 
     fs.writeFileSync("./" + leave + ".json", JSON.stringify(data, null, 2), 'utf8');
+    console.log(`completed successfully with ${Object.keys(data).length} strings found`);
 }
 
 main();

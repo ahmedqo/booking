@@ -24,7 +24,7 @@ class Alert extends Mailable
     {
         return new Envelope(
             subject: $this->data['subject'],
-            from: new Address(env('MAIL_NOREPLAY_ADDRESS'), env('MAIL_NAME')),
+            from: $this->data['from'],
             to: is_array($this->data['to']) ? $this->data['to'] : [$this->data['to']],
         );
     }

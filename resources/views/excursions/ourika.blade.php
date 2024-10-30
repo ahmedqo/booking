@@ -234,10 +234,9 @@
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(
                                         __('Reaching the waterfalls is of course the high point of the walk. The cool, flowing water gives great relief and you will have enough time to relax, take photos, or even dip your feet in the water. The hike is appropriate for almost every fitness level, and your guide will make sure the speed is easy for all.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Lunch by the River: A Taste of Moroccan Flavors.'),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Lunch by the River: A Taste of Moroccan Flavors.'),
                                     ) }}
                                 </p>
-
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
@@ -290,7 +289,6 @@
                                         ),
                                     ) }}
                                 </p>
-
                             </div>
                         </div>
                     </div>

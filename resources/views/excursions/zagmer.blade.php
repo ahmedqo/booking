@@ -30,9 +30,9 @@
   "description": "Join a 4-day desert tour from Marrakech to Zagora and Merzouga. Enjoy camel rides, desert camps, and explore the stunning landscapes of Morocco's Sahara.",
   "image": [
     "{{ asset('img/merzouga/merzouga-1.webp') }}",
-    "{{ asset('img/zagoura/zagoura-1.webp') }}",
+    "{{ asset('img/zagora/zagora-1.webp') }}",
     "{{ asset('img/merzouga/merzouga-2.webp') }}",
-    "{{ asset('img/zagoura/zagoura-2.webp') }}",
+    "{{ asset('img/zagora/zagora-2.webp') }}",
     "{{ asset('img/merzouga/merzouga-3.webp') }}"
   ],
   "touristType": "Adventurers, Culture Enthusiasts, Families",
@@ -132,12 +132,12 @@
             <div class="lg:col-span-2 flex flex-col gap-10">
                 <div class="flex flex-col gap-4">
                     @include('shared.guest.slider', [
-                        'alt' => 'zagoura & merzouga trip image',
+                        'alt' => 'zagora & merzouga trip image',
                         'img' => [
                             asset('img/merzouga/merzouga-1.webp'),
-                            asset('img/zagoura/zagoura-1.webp'),
+                            asset('img/zagora/zagora-1.webp'),
                             asset('img/merzouga/merzouga-2.webp'),
-                            asset('img/zagoura/zagoura-2.webp'),
+                            asset('img/zagora/zagora-2.webp'),
                             asset('img/merzouga/merzouga-3.webp'),
                         ],
                     ])
@@ -350,6 +350,6 @@
         </div>
     </section>
     @include('shared.guest.reserve', [
-        'type' => 'zagoura and merzouga excursion',
+        'type' => 'zagora and merzouga excursion',
     ])
 @endsection

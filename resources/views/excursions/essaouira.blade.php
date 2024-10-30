@@ -209,9 +209,9 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Departure from Marrakech')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('Your visit to Essaouira will take place on a clear and sunny day when you will set out from Marrakeck at 9:00 AM. The sun rising in the mornings and the city of Marrakesh fading away in the background, you will witness the enchanting greeneries and beautiful breathtaking landscapes of rural Morocco. giving you plenty of opportunities to capture some stunning photos.')) }}
                                 </p>
@@ -220,9 +220,9 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Explore the Enchanting Medina of Essaouira')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('On your first stop in Essaouira, the first place you would visit will be Medina which is famous for its beautiful decoration and labyrinthine streets. Essaouira’s Medieval Town is one of six UNESCO World Heritage sites in Morocco. This means that it is not only a pretty place but also has great historical and cultural significance. The ancient ramparts, narrow streets, and whitewashed buildings of the city are testaments to the rich history and culture of the city.')) }}
                                 </p>
@@ -234,9 +234,9 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Admire Essaouira’s Unique Architecture')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('One of the most memorable things about Essaouira is the city\'s unique buildings. The city\'s diverse history is reflected in the architectural style of the buildings which is a blend of Moroccan, Portuguese, and French. The historical fortress Skala de la Kasbah, which gives you stunning views of the Atlantic Ocean, is also a must-see on your Essaouira tour from Marrakech.')) }}
                                 </p>
@@ -245,9 +245,9 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Savor the Flavors of Essaouira’s Fresh Moroccan Seafood')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('No trip to Essaouira is complete without a tasting of the city\'s signature seafood. Known for its fishing port, Essaouira has almost the freshest seafood in Morocco. You\'re at a point for lunch, and you can go to one of the many traditional restaurants within the medina or near the port. Taste the freshly caught fish, which is grilled to order, together with the Moroccan salads and the freshly baked bread.')) }}
                                 </p>
@@ -256,17 +256,17 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Camel Ride and Jewish Quarter Tour')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('After enjoying a delicious meal, embark on a camel ride along the beach, an unforgettable experience for both young and old. You can also visit the old Jewish quarter of Essaouira, where you\'ll discover historical synagogues and the fascinating history surrounding them.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Return to Marrakech')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('After a fulfilling day in Essaouira, you\'ll head back to Marrakech around 8:00 PM. This day trip will leave you with unforgettable memories of Morocco\'s beauty and culture, just a few hours from Marrakech. Enjoy every moment of this unique adventure!')) }}
                                 </p>

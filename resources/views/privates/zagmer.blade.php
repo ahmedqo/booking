@@ -15,12 +15,12 @@
             <div class="lg:col-span-2 flex flex-col gap-10">
                 <div class="flex flex-col gap-4">
                     @include('shared.guest.slider', [
-                        'alt' => 'zagoura & merzouga trip image',
+                        'alt' => 'zagora & merzouga trip image',
                         'img' => [
                             asset('img/merzouga/merzouga-1.webp'),
-                            asset('img/zagoura/zagoura-1.webp'),
+                            asset('img/zagora/zagora-1.webp'),
                             asset('img/merzouga/merzouga-2.webp'),
-                            asset('img/zagoura/zagoura-2.webp'),
+                            asset('img/zagora/zagora-2.webp'),
                             asset('img/merzouga/merzouga-3.webp'),
                         ],
                     ])

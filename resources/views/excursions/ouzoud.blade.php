@@ -191,10 +191,10 @@
                     </h2>
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
-                            <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Discover the Ouzoud Waterfalls from Marrakech: Embark on a Guaranteed Unforgettable Trip')) }}
-                            </h3>
                             <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-black">
+                                    {{ ucwords(__('Discover the Ouzoud Waterfalls from Marrakech: Embark on a Guaranteed Unforgettable Trip')) }}
+                                </h3>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('A day trip to the Ouzoud Waterfalls is a perfect escape from the busy streets of Marrakech. Located around 150 kilometers away, the falls offer you a peaceful and scenic retreat into the Moroccan countryside, complete with stunning natural views, wildlife, and local cuisine.')) }}
                                 </p>
@@ -214,7 +214,6 @@
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('After the journey, you\'ll arrive at the breathtaking Ouzoud Waterfalls, standing over 100 meters high. You\'ll have around four hours to explore the area. There\'s plenty to do from walking around the falls to swimming in the pools at the base. You\'ll also likely encounter the famous Ouzoud Falls monkeys, a group of Barbary macaques that roam the area. They are friendly and often approach visitors, making for a memorable wildlife experience.')) }}
                                 </p>
-
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">

@@ -106,7 +106,7 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h3 class="font-x-huge text-xl text-x-prime">
                                     {{ ucwords(__('Explore Ourika from Marrakech: A Cultural and Coastal Getaway')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">

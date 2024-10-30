@@ -20,8 +20,8 @@
     <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
 
     <!-- Meta Images -->
-    <meta property="og:image" content="{{ asset('img/zagoura/zagoura-3.webp') }}">
-    <meta name="twitter:image" content="{{ asset('img/zagoura/zagoura-3.webp') }}">
+    <meta property="og:image" content="{{ asset('img/zagora/zagora-3.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/zagora/zagora-3.webp') }}">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -31,9 +31,9 @@
   "name": "Best Zagora Sahara Desert Tour & Excursion From Marrakech – 2-Day Trip",
   "description": "EDiscover the Zagora Sahara Desert on a 2-day excursion from Marrakech. Enjoy camel rides, visit Ait Ben Haddou, and experience a magical night for just €65.",
   "image": [
-    "{{ asset('img/zagoura/zagoura-1.webp') }}",
-    "{{ asset('img/zagoura/zagoura-2.webp') }}",
-    "{{ asset('img/zagoura/zagoura-3.webp') }}"
+    "{{ asset('img/zagora/zagora-1.webp') }}",
+    "{{ asset('img/zagora/zagora-2.webp') }}",
+    "{{ asset('img/zagora/zagora-3.webp') }}"
   ],
   "touristType": "Adventurers, Culture Enthusiasts, Families",
   "itinerary": {
@@ -83,7 +83,7 @@
     "price": "65.00",
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
-    "url": "{{ route('views.excursions.zagoura') }}",
+    "url": "{{ route('views.excursions.zagora') }}",
     "description": "Book your 2-day Zagora Desert Trip from Marrakech, including camel rides, a night in a desert camp, and a visit to Ouarzazate."
   },
   "provider": {
@@ -124,11 +124,11 @@
             <div class="lg:col-span-2 flex flex-col gap-10">
                 <div class="flex flex-col gap-4">
                     @include('shared.guest.slider', [
-                        'alt' => 'zagoura trip image',
+                        'alt' => 'zagora trip image',
                         'img' => [
-                            asset('img/zagoura/zagoura-1.webp'),
-                            asset('img/zagoura/zagoura-2.webp'),
-                            asset('img/zagoura/zagoura-3.webp'),
+                            asset('img/zagora/zagora-1.webp'),
+                            asset('img/zagora/zagora-2.webp'),
+                            asset('img/zagora/zagora-3.webp'),
                         ],
                     ])
                     <p class="text-x-black font-x-thin text-lg">
@@ -299,6 +299,6 @@
         </div>
     </section>
     @include('shared.guest.reserve', [
-        'type' => 'zagoura excursion',
+        'type' => 'zagora excursion',
     ])
 @endsection

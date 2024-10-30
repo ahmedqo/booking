@@ -31,14 +31,14 @@ class Core
                 'url' => route('views.privates.ouzoud'),
             ],
             (object) [
-                'image' => asset('img/excursions/zagoura-trip.webp'),
-                'title' => __('Zagoura Excursions'),
+                'image' => asset('img/excursions/zagora-trip.webp'),
+                'title' => __('Zagora Excursions'),
                 'desc' => __(
-                    'Traveling from Marrakech to Zagoura offers an opportunity to experience the stunning landscapes of Morocco\'s desert region',
+                    'Traveling from Marrakech to Zagora offers an opportunity to experience the stunning landscapes of Morocco\'s desert region',
                 ),
                 'price' => '280',
                 'time' => '2 ' . __('days') . ' / 1 ' . __('nights'),
-                'url' => route('views.privates.zagoura'),
+                'url' => route('views.privates.zagora'),
             ],
             (object) [
                 'image' => asset('img/excursions/merzouga-trip.webp'),
@@ -51,9 +51,9 @@ class Core
                 'url' => route('views.privates.merzouga'),
             ],
             (object) [
-                'image' => asset('img/excursions/zagoura-and-merzouga-trip.webp'),
-                'title' => __('Merzouga & Zagoura'),
-                'desc' => __('Combining visits to both Merzouga and Zagoura offers a exploration of Morocco\'s desert'),
+                'image' => asset('img/excursions/zagora-and-merzouga-trip.webp'),
+                'title' => __('Merzouga & Zagora'),
+                'desc' => __('Combining visits to both Merzouga and Zagora offers a exploration of Morocco\'s desert'),
                 'price' => '600',
                 'time' => '4 ' . __('days') . ' / 3 ' . __('nights'),
                 'url' => route('views.privates.zagmer'),
@@ -98,14 +98,14 @@ class Core
                 'url' => route('views.excursions.ouzoud'),
             ],
             (object) [
-                'image' => asset('img/excursions/zagoura-trip.webp'),
-                'title' => __('Zagoura Excursions'),
+                'image' => asset('img/excursions/zagora-trip.webp'),
+                'title' => __('Zagora Excursions'),
                 'desc' => __(
-                    'Traveling from Marrakech to Zagoura offers an opportunity to experience the stunning landscapes of Morocco\'s desert region',
+                    'Traveling from Marrakech to Zagora offers an opportunity to experience the stunning landscapes of Morocco\'s desert region',
                 ),
                 'price' => '65',
                 'time' => '2 ' . __('days') . ' / 1 ' . __('nights'),
-                'url' => route('views.excursions.zagoura'),
+                'url' => route('views.excursions.zagora'),
             ],
             (object) [
                 'image' => asset('img/excursions/merzouga-trip.webp'),
@@ -118,9 +118,9 @@ class Core
                 'url' => route('views.excursions.merzouga'),
             ],
             (object) [
-                'image' => asset('img/excursions/zagoura-and-merzouga-trip.webp'),
-                'title' => __('Merzouga & Zagoura'),
-                'desc' => __('Combining visits to both Merzouga and Zagoura offers a exploration of Morocco\'s desert'),
+                'image' => asset('img/excursions/zagora-and-merzouga-trip.webp'),
+                'title' => __('Merzouga & Zagora'),
+                'desc' => __('Combining visits to both Merzouga and Zagora offers a exploration of Morocco\'s desert'),
                 'price' => '145',
                 'time' => '4 ' . __('days') . ' / 3 ' . __('nights'),
                 'url' => route('views.excursions.zagmer'),

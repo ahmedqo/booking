@@ -184,12 +184,14 @@
                     </h2>
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
-                            <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Discover Ouarzazate and Ait Ben Haddou: A Day Trip from Marrakech')) }}
-                            </h3>
-                            <p class="text-x-black text-lg font-normal">
-                                {{ ucfirst(__('Are you ready for an adventure that you\'ll never forget? Embark on a Ouarzazate day trip from Marrakech and discover some of Morocco\'s most beautiful and rich in culture and history. This is a daylong trip that will give you the opportunity to enjoy breathtaking views, experience an interesting history, and see what is referred to as "Africa\'s Hollywood."')) }}
-                            </p>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-black">
+                                    {{ ucwords(__('Discover Ouarzazate and Ait Ben Haddou: A Day Trip from Marrakech')) }}
+                                </h3>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Are you ready for an adventure that you\'ll never forget? Embark on a Ouarzazate day trip from Marrakech and discover some of Morocco\'s most beautiful and rich in culture and history. This is a daylong trip that will give you the opportunity to enjoy breathtaking views, experience an interesting history, and see what is referred to as "Africa\'s Hollywood."')) }}
+                                </p>
+                            </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Early Morning Departure from Marrakech')) }}

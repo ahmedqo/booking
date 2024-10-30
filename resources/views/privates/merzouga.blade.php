@@ -110,7 +110,7 @@
                                 {{ ucfirst(__('Exploring the Marrakech-Merzouga Excursion: An Adventure in the Heart of Morocco.')) }}
                             </p>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h3 class="font-x-huge text-xl text-x-prime">
                                     {{ ucwords(__('Day 1: Marrakech – Dades Gorges')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
@@ -121,7 +121,7 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h3 class="font-x-huge text-xl text-x-prime">
                                     {{ ucwords(__('Day 2: Dades Gorges – Merzouga')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
@@ -132,7 +132,7 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h3 class="font-x-huge text-xl text-x-prime">
                                     {{ ucwords(__('Day 3: Merzouga – Marrakech')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">

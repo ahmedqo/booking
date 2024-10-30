@@ -194,7 +194,6 @@
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('For people who are discovering Marrakech, the Majorelle Gardens as well as the lively and bustling Marrakech souks are the two must visits stops if you are keen on discovering the rich culture of the city and its heritage. The destinations not only symbolize the artistic and historical beauty of Morocco but also are a peaceful oasis and a lively adventure through the heart of the city.')) }}
                                 </p>
-
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
@@ -233,11 +232,9 @@
                                 <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Ready for an Unforgettable Journey?')) }}
                                 </h4>
-
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('A visit to Majorelle Gardens and the souks of Marrakech combines relaxation, history, and adventure. From the peaceful walkways of the garden to the bustling energy of the Medina, you’ll discover the charm and beauty of Marrakech’s most beloved landmarks. Ready to explore? Book your tour with Moroccan Adventure City and embark on a journey that will stay with you forever!')) }}
                                 </p>
-
                             </div>
                         </div>
                     </div>

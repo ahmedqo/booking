@@ -19,8 +19,8 @@
     <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
 
     <!-- Meta Images -->
-    <meta property="og:image" content="{{ asset('img/zagoura/zagoura-3.webp') }}">
-    <meta name="twitter:image" content="{{ asset('img/zagoura/zagoura-3.webp') }}">
+    <meta property="og:image" content="{{ asset('img/merzouga/merzouga-1.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/merzouga/merzouga-1.webp') }}">
 
     <script type="application/ld+json">
 {
@@ -200,18 +200,18 @@
                     </h2>
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
-                            <p class="text-x-black text-lg font-normal">
-                                {{ ucfirst(__('Exploring Morocco’s Magical 3-Day Tour from Marrakech to Merzouga')) }}
-                            </p>
                             <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-black">
+                                    {{ ucfirst(__('Exploring Morocco’s Magical 3-Day Tour from Marrakech to Merzouga')) }}
+                                </h3>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('Are you seeking an incredible journey through the most amazing landscapes of Morocco?  The 3 days tour from Marrakech to Merzouga is the perfect way to immerse yourself in the country’s rich history, vibrant culture, and stunning natural beauty. From the majestic Atlas Mountains to the golden dunes of Merzouga, this tour promises a whirlwind of experiences you’ll never forget.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Day 1: From the vibrant city of Marrakech to the Serene Dades Gorges')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('Your journey starts in Marrakech, the lively city center of Morocco you’ll quickly leave the city behind as you ascend into the Atlas Mountains. The road to adventure takes you through the Tichka Pass, which climbs to a breathtaking 2,260 meters above sea level. Be sure to stop and admire the panoramic views of the valleys below as you snake your way through this mountainous road it looks like a scene from a movie!')) }}
                                 </p>
@@ -223,9 +223,9 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Day 2: Into the Heart of the Moroccan Desert – Merzouga Awaits')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('On a second day the excitement builds, as you start your journey from the Dades Gorges and go to the breathtaking Merzouga desert. The whole way, you will drive through the Valley of a Thousand Kasbahs, where old fortress-style homes from the past are along the road like the invincible sentinels of history. Your tour will divert you through the mesmerizing Todra Gorges, where towering rock walls frame a narrow, winding canyon. This is one of Morocco’s most iconic natural landmarks, and it’s sure to leave a lasting impression.')) }}
                                 </p>
@@ -234,30 +234,28 @@
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Day 3: Sunrise Over the Dunes and Return to Marrakech')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('It is priceless to spend the night in the desert and then have the opportunity to look at the sun rising over the dunes of Merzouga when you wake up. After breakfast, it\'s time to bid farewell to the Sahara and begin your journey back to Marrakech. On the return route, you\'ll pass through Erfoud, known for its fossils, and Rissani, a historic town that was once a major trading center in the region. You\'ll also stop once again in Ouarzazate for a relaxed lunch before continuing on through the Atlas Mountains, where you\'ll arrive around 8:00 PM, concluding this memorable Marrakech to Merzouga excursion.')) }}
                                 </p>
-
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Why This Tour is a Must-Do!')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('This 3 day desert tour from Marrakech to Merzouga offers an unmatched opportunity to experience the best of Morocco\'s natural beauty and cultural heritage. From the dramatic landscapes of the Atlas Mountains to the vast, mesmerizing dunes of the Sahara, this tour will leave you with memories that will last a lifetime. Whether you\'re an adventure enthusiast, a history buff, or simply someone looking to immerse themselves in the magic of Morocco, this tour has something for everyone.')) }}
                                 </p>
-
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('It’s not just about the destinations you’ll visit—it’s the journey itself. The scenic drives, the hidden gems along the way, and the chance to see Morocco from a perspective most tourists never do make this tour a truly unique experience')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-black">
+                                <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('A Final Word: Your Adventure Awaits')) }}
-                                </h3>
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(
                                         __(
@@ -265,7 +263,6 @@
                                         ),
                                     ) }}
                                 </p>
-
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('Your desert dream is just a click away!')) }}
                                 </p>

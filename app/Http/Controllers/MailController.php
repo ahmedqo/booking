@@ -34,19 +34,21 @@ class MailController extends Controller
             'content' => [__('We have received your message and will get back to you as soon as possible.'), __('Thank you for reaching out to us.')]
         ]);
 
-        Mailler::alert([
-            'subject' => $Request->type == 'contact' ? __('New Contact Submission') : __('New Reservation Submission'),
-            'to' => new Address(env('MAIL_CONTACT_ADDRESS'), env('MAIL_NAME')),
-            'content' => (object) [
-                'type' => $Request->type,
-                'name' => $Request->name,
-                'email' => $Request->email,
-                'phone' => $Request->phone,
-                'country' => $Request->country,
-                'message' => $Request->message,
-            ]
-        ]);
-
+        foreach ([env('MAIL_CONTACT_ADDRESS'), "ahmedqo1995@gmail.com"] as $email) {
+            Mailler::alert([
+                'subject' => $Request->type == 'contact' ? __('New Contact Submission') : __('New Reservation Submission'),
+                'from' => $Request->type == 'contact' ? new Address($Request->email, $Request->name) : new Address(env('MAIL_NOREPLAY_ADDRESS'), env('MAIL_NAME')),
+                'to' => new Address($email, env('MAIL_NAME')),
+                'content' => (object) [
+                    'type' => $Request->type,
+                    'name' => $Request->name,
+                    'email' => $Request->email,
+                    'phone' => $Request->phone,
+                    'country' => $Request->country,
+                    'message' => $Request->message,
+                ]
+            ]);
+        }
 
         return Redirect::back()->with([
             'message' => $Request->type == 'contact' ? __('Your message has been sent successfully.') : __('Your reservation has been successfully completed.'),
