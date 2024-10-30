@@ -51,7 +51,7 @@ const extractTextFromFiles = (dir, js) => {
 };
 
 function main() {
-    const data = {},
+    const dictionary = {},
         args = process.argv,
         ends = args.includes("--view") ? '.blade.php' : '',
         base = args.includes("--view") ? 'resources/views' : '';
@@ -61,13 +61,14 @@ function main() {
 
     enter.forEach(_path => {
         const extractedText = extractTextFromFiles(path.join(base, _path));
-        Object.values(extractedText).reduce((a, e) => [...a, ...e], []).forEach(dd => {
-            data[dd] = dd;
+        Object.values(extractedText).reduce((carry, current) => [...carry, ...current], []).forEach(text => {
+            text = text.replace(/[\r\n\t]/g, "").replace(/\\(?=['"`])/g, '');
+            dictionary[text] = text;
         });
     });
 
-    fs.writeFileSync("./" + leave + ".json", JSON.stringify(data, null, 2), 'utf8');
-    console.log(`completed successfully with ${Object.keys(data).length} strings found`);
+    fs.writeFileSync("./lang/" + leave + ".json", JSON.stringify(dictionary, null, 2), 'utf8');
+    console.log(`completed successfully with ${Object.keys(dictionary).length} strings found`);
 }
 
 main();
