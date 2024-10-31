@@ -26,11 +26,11 @@
       {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Private Marrakech Airport Transfer: 24/7 Service",
-  "description": "Book a private transfer to or from Marrakech Airport. Secure, comfortable, and available 24/7 with no extra charges for flight delays.",
+  "name": "{{ __('Private Marrakech Airport Transfer: 24/7 Service') }}",
+  "description": "{{ __('Book a private transfer to or from Marrakech Airport. Secure, comfortable, and available 24/7 with no extra charges for flight delays.') }}",
   "provider": {
     "@type": "Organization",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "https://example.com", 
     "logo": "https://example.com/img/logo.webp"
   },
@@ -49,7 +49,7 @@
         "minValue": 1,
         "maxValue": 6
       },
-      "description": "Private transfer for 1-6 persons",
+      "description": "{{ __('Private transfer for 1-6 persons') }}",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-10-26"
     },

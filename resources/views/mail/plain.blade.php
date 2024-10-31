@@ -9,7 +9,8 @@
                 </a>
                 <div style="background:#fcfcfc; padding: 44px 20px; border-radius: 10px;">
                     @foreach ($data['content'] as $message)
-                        <p style="display: block; font-size: 16px; font-weight: 600; color: #1d1d1d99;margin:0">
+                        <p
+                            style="display: block; font-size: 16px; font-weight: 600; color: #1d1d1d99;margin:0; {{ !$loop->last ? 'margin-bottom: 16px;' : '' }}">
                             {{ ucfirst($message) }}
                         </p>
                     @endforeach

@@ -26,8 +26,8 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "4-Day Desert Tour: Zagora & Merzouga from Marrakech",
-  "description": "Join a 4-day desert tour from Marrakech to Zagora and Merzouga. Enjoy camel rides, desert camps, and explore the stunning landscapes of Morocco's Sahara.",
+  "name": "{{ __('4-Day Desert Tour: Zagora & Merzouga from Marrakech') }}",
+  "description": "{{ __('Join a 4-day desert tour from Marrakech to Zagora and Merzouga. Enjoy camel rides, desert camps, and explore the stunning landscapes of Morocco\'s Sahara.') }}",
   "image": [
     "{{ asset('img/merzouga/merzouga-1.webp') }}",
     "{{ asset('img/zagora/zagora-1.webp') }}",
@@ -35,51 +35,51 @@
     "{{ asset('img/zagora/zagora-2.webp') }}",
     "{{ asset('img/merzouga/merzouga-3.webp') }}"
   ],
-  "touristType": "Adventurers, Culture Enthusiasts, Families",
+  "touristType": "{{ __('Adventurers, Culture Enthusiasts, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Departure from Marrakech",
-        "description": "Pick-up at 07:00 AM from your hotel or Riad in Marrakech."
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Pick-up at 07:00 AM from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Visit to Ait Ben Haddou",
-        "description": "Explore the iconic Ait Ben Haddou Kasbah, a UNESCO World Heritage site."
+        "name": "{{ __('Visit to Ait Ben Haddou') }}",
+        "description": "{{ __('Explore the iconic Ait Ben Haddou Kasbah, a UNESCO World Heritage site.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Lunch in Ouarzazate",
-        "description": "Enjoy a traditional Moroccan lunch in Ouarzazate, known as the 'Gateway to the Desert'."
+        "name": "{{ __('Lunch in Ouarzazate') }}",
+        "description": "{{ __('Enjoy a traditional Moroccan lunch in Ouarzazate, known as the \'Gateway to the Desert\'.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Camel Ride and Overnight in Zagora",
-        "description": "Take a 1.5-hour camel ride through the Zagora desert, followed by an overnight stay under the stars at a desert camp."
+        "name": "{{ __('Camel Ride and Overnight in Zagora') }}",
+        "description": "{{ __('Take a 1.5-hour camel ride through the Zagora desert, followed by an overnight stay under the stars at a desert camp.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Dades Gorges and Valley of a Thousand Kasbahs",
-        "description": "Visit the Dades Gorges and pass through the beautiful Valley of a Thousand Kasbahs."
+        "name": "{{ __('Dades Gorges and Valley of a Thousand Kasbahs') }}",
+        "description": "{{ __('Visit the Dades Gorges and pass through the beautiful Valley of a Thousand Kasbahs.') }}"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "Camel Ride and Overnight in Merzouga",
-        "description": "Ride camels into the Erg Chebbi dunes, enjoy the sunset, and spend the night in a desert camp."
+        "name": "{{ __('Camel Ride and Overnight in Merzouga') }}",
+        "description": "{{ __('Ride camels into the Erg Chebbi dunes, enjoy the sunset, and spend the night in a desert camp.') }}"
       },
       {
         "@type": "ListItem",
         "position": 7,
-        "name": "Return to Marrakech",
-        "description": "After breakfast, journey back to Marrakech, passing through Kalaat M’gouna and the Valley of Roses."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('After breakfast, journey back to Marrakech, passing through Kalaat M’gouna and the Valley of Roses.') }}"
       }
     ]
   },
@@ -90,11 +90,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your 4-day desert tour from Marrakech to Zagora and Merzouga, including camel rides, desert camps, and visits to Ait Ben Haddou, Dades Gorges, and more."
+    "description": "{{ __('Book your 4-day desert tour from Marrakech to Zagora and Merzouga, including camel rides, desert camps, and visits to Ait Ben Haddou, Dades Gorges, and more.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

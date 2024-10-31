@@ -25,40 +25,40 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Thrilling Buggy Ride in Marrakech’s Palm Grove Desert",
-  "description": "Experience the thrill of a buggy ride through Marrakech’s palm grove desert. Explore scenic trails, visit Berber villages, and enjoy Saharan landscapes on this unforgettable adventure.",
+  "name": "{{ __('Thrilling Buggy Ride in Marrakech’s Palm Grove Desert') }}",
+  "description": "{{ __('Experience the thrill of a buggy ride through Marrakech’s palm grove desert. Explore scenic trails, visit Berber villages, and enjoy Saharan landscapes on this unforgettable adventure.') }}",
   "image": [
     "{{ asset('img/buggy/buggy-1.webp') }}",
     "{{ asset('img/buggy/buggy-2.webp') }}",
     "{{ asset('img/buggy/buggy-3.webp') }}"
   ],
-  "touristType": "Adventure Enthusiasts, Couples, Families",
+  "touristType": "{{ __('Adventure Enthusiasts, Couples, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up from your hotel or Riad in Marrakech for a stress-free start to your adventure."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up from your hotel or Riad in Marrakech for a stress-free start to your adventure.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Buggy Ride Through the Palm Grove",
-        "description": "Enjoy a thrilling buggy ride through desert trails in Marrakech’s palm grove."
+        "name": "{{ __('Buggy Ride Through the Palm Grove') }}",
+        "description": "{{ __('Enjoy a thrilling buggy ride through desert trails in Marrakech’s palm grove.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Break at Berber Village",
-        "description": "Stop at a traditional Berber village, enjoy mint tea, and learn about the local culture."
+        "name": "{{ __('Break at Berber Village') }}",
+        "description": "{{ __('Stop at a traditional Berber village, enjoy mint tea, and learn about the local culture.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Return to Marrakech",
-        "description": "Conclude the adventure and return to your hotel or Riad in Marrakech."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('Conclude the adventure and return to your hotel or Riad in Marrakech.') }}"
       }
     ]
   },
@@ -68,11 +68,11 @@
     "price": "90.00",
     "availability": "https://schema.org/InStock",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your 2-hour buggy ride in Marrakech’s palm grove and enjoy an exciting desert adventure."
+    "description": "{{ __('Book your 2-hour buggy ride in Marrakech’s palm grove and enjoy an exciting desert adventure.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

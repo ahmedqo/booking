@@ -26,46 +26,46 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Ouarzazate Day Trip from Marrakech: Ait Ben Haddou & Atlas",
-  "description": "Explore Ouarzazate and Ait Ben Haddou on a day trip from Marrakech. Discover iconic film studios, historic Kasbahs, and the stunning Atlas Mountains.",
+  "name": "{{ __('Ouarzazate Day Trip from Marrakech: Ait Ben Haddou & Atlas') }}",
+  "description": "{{ __('Explore Ouarzazate and Ait Ben Haddou on a day trip from Marrakech. Discover iconic film studios, historic Kasbahs, and the stunning Atlas Mountains.') }}",
   "image": [
     "{{ asset('img/ouarzazate/ouarzazate-1.webp') }}",
     "{{ asset('img/ouarzazate/ouarzazate-2.webp') }}",
     "{{ asset('img/ouarzazate/ouarzazate-3.webp') }}"
   ],
-  "touristType": "Culture Enthusiasts, Adventure Seekers, History Buffs",
+  "touristType": "{{ __('Culture Enthusiasts, Adventure Seekers, History Buffs') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up from your hotel or Riad in Marrakech at 07:00 AM."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up from your hotel or Riad in Marrakech at 07:00 AM.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Journey through the Atlas Mountains",
-        "description": "Travel through the scenic Atlas Mountains and Tichka Pass en route to Ouarzazate."
+        "name": "{{ __('Journey through the Atlas Mountains') }}",
+        "description": "{{ __('Travel through the scenic Atlas Mountains and Tichka Pass en route to Ouarzazate.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Visit Ait Ben Haddou Kasbah",
-        "description": "Explore the UNESCO-listed Ait Ben Haddou Kasbah, a historic fortress of clay and stone."
+        "name": "{{ __('Visit Ait Ben Haddou Kasbah') }}",
+        "description": "{{ __('Explore the UNESCO-listed Ait Ben Haddou Kasbah, a historic fortress of clay and stone.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Explore Ouarzazate",
-        "description": "Discover Ouarzazate, known as 'The Hollywood of Africa,' and visit its famous film studios."
+        "name": "{{ __('Explore Ouarzazate') }}",
+        "description": "{{ __('Discover Ouarzazate, known as \'The Hollywood of Africa,\' and visit its famous film studios.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Return to Marrakech",
-        "description": "End your excursion with a scenic return to Marrakech by 8:00 PM."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('End your excursion with a scenic return to Marrakech by 8:00 PM.') }}"
       }
     ]
   },
@@ -76,11 +76,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your Ouarzazate day trip from Marrakech and explore Ait Ben Haddou, iconic film studios, and the stunning Atlas Mountains."
+    "description": "{{ __('Book your Ouarzazate day trip from Marrakech and explore Ait Ben Haddou, iconic film studios, and the stunning Atlas Mountains.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

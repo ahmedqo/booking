@@ -25,40 +25,40 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Camel Safari Ride in Marrakech: Explore the Desert Oasis",
-  "description": "Experience a 2-hour camel safari in Marrakech’s Palmeraie. Discover desert landscapes, enjoy mint tea, and capture memories in traditional Berber attire.",
+  "name": "{{ __('Camel Safari Ride in Marrakech: Explore the Desert Oasis') }}",
+  "description": "{{ __('Experience a 2-hour camel safari in Marrakech’s Palmeraie. Discover desert landscapes, enjoy mint tea, and capture memories in traditional Berber attire.') }}",
   "image": [
     "{{ asset('img/camel/camel-1.webp') }}",
     "{{ asset('img/camel/camel-2.webp') }}",
     "{{ asset('img/camel/camel-3.webp') }}"
   ],
-  "touristType": "Adventure Seekers, Families, Culture Enthusiasts",
+  "touristType": "{{ __('Adventure Seekers, Families, Culture Enthusiasts') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up from your hotel or Riad in Marrakech."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Camel Ride in the Palmeraie",
-        "description": "Enjoy a scenic camel ride through Marrakech’s Palmeraie, exploring desert landscapes."
+        "name": "{{ __('Camel Ride in the Palmeraie') }}",
+        "description": "{{ __('Enjoy a scenic camel ride through Marrakech’s Palmeraie, exploring desert landscapes.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Visit a Berber Village",
-        "description": "Stop in a traditional Berber village for mint tea and traditional bread with olive oil."
+        "name": "{{ __('Visit a Berber Village') }}",
+        "description": "{{ __('Stop in a traditional Berber village for mint tea and traditional bread with olive oil.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Return to Marrakech",
-        "description": "After your desert safari, return to your hotel or Riad in Marrakech."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('After your desert safari, return to your hotel or Riad in Marrakech.') }}"
       }
     ]
   },
@@ -69,11 +69,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your 2-hour camel safari in Marrakech’s Palmeraie. Discover the desert, enjoy mint tea, and capture memories."
+    "description": "{{ __('Book your 2-hour camel safari in Marrakech’s Palmeraie. Discover the desert, enjoy mint tea, and capture memories.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

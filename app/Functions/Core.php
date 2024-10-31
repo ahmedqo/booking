@@ -14,7 +14,7 @@ class Core
 
     public static function nav()
     {
-        return [__('Home') => route('views.guest.index'), __('Excurtions') => route('views.guest.excursion'), __('Private Excurtions') => route('views.guest.private'), __('Transfers') => route('views.guest.transfer'), __('About Us') => route('views.guest.about'), __('Contact') => route('views.guest.contact')];
+        return [__('Home') => route('views.guest.index'), __('Excursions') => route('views.guest.excursion'), __('Private Excursions') => route('views.guest.private'), __('Transfers') => route('views.guest.transfer'), __('About Us') => route('views.guest.about'), __('Contact') => route('views.guest.contact')];
     }
 
     public static function trips($private = false)
@@ -232,6 +232,11 @@ class Core
     public static function lang($lang = null)
     {
         return $lang ? app()->getLocale() == $lang : app()->getLocale();
+    }
+
+    public static function pickupList()
+    {
+        return ['hotel', 'riad'];
     }
 
     public static function nationsList()

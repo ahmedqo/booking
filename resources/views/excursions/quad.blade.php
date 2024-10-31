@@ -25,40 +25,40 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Quad Marrakech Desert Excursion: Explore Dunes & Desert",
-  "description": "Discover the Marrakech desert quad tour. Explore trails, visit villages, and enjoy mint tea. Daily departures, book now for an unforgettable experience.",
+  "name": "{{ __('Quad Marrakech Desert Excursion: Explore Dunes & Desert') }}",
+  "description": "{{ __('Discover the Marrakech desert quad tour. Explore trails, visit villages, and enjoy mint tea. Daily departures, book now for an unforgettable experience.') }}",
   "image": [
     "{{ asset('img/quad/quad-1.webp') }}",
     "{{ asset('img/quad/quad-2.webp') }}",
     "{{ asset('img/quad/quad-3.webp') }}"
   ],
-  "touristType": "Adventure Seekers, Outdoor Enthusiasts",
+  "touristType": "{{ __('Adventure Seekers, Outdoor Enthusiasts') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up from your hotel or Riad in Marrakech at your selected departure time."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up from your hotel or Riad in Marrakech at your selected departure time.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Quad Ride Through the Palmeraie",
-        "description": "Embark on a thrilling quad ride through the Palmeraie region, exploring desert trails and admiring scenic landscapes."
+        "name": "{{ __('Quad Ride Through the Palmeraie') }}",
+        "description": "{{ __('Embark on a thrilling quad ride through the Palmeraie region, exploring desert trails and admiring scenic landscapes.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Visit to Berber Village",
-        "description": "Stop at a traditional Berber village for mint tea and freshly baked bread with organic olive oil."
+        "name": "{{ __('Visit to Berber Village') }}",
+        "description": "{{ __('Stop at a traditional Berber village for mint tea and freshly baked bread with organic olive oil.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Return to Marrakech",
-        "description": "End your desert adventure and return to Marrakech with unforgettable memories."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('End your desert adventure and return to Marrakech with unforgettable memories.') }}"
       }
     ]
   },
@@ -69,11 +69,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your exciting quad desert Marrakech excursion. Explore the dunes, visit local villages, and enjoy the thrill of the desert."
+    "description": "{{ __('Book your exciting quad desert Marrakech excursion. Explore the dunes, visit local villages, and enjoy the thrill of the desert.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

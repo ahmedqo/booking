@@ -26,58 +26,58 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Excursion Essaouira from Marrakech – Full-Day Tour",
-  "description": "Discover the charm of Essaouira on a full-day tour from Marrakech. Enjoy camel rides, explore the historic medina, and savor fresh seafood by the Atlantic coast.",
+  "name": "{{ __('Excursion Essaouira from Marrakech – Full-Day Tour') }}",
+  "description": "{{ __('Discover the charm of Essaouira on a full-day tour from Marrakech. Enjoy camel rides, explore the historic medina, and savor fresh seafood by the Atlantic coast.') }}",
   "image": [
     "{{ asset('img/essaouira/essaouira-1.webp') }}",
     "{{ asset('img/essaouira/essaouira-2.webp') }}",
     "{{ asset('img/essaouira/essaouira-3.webp') }}"
   ],
-  "touristType": "Adventurers, Culture Enthusiasts, Families",
+  "touristType": "{{ __('Adventurers, Culture Enthusiasts, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Departure from Marrakech",
-        "description": "Pick-up between 8:00 AM and 9:00 AM from your hotel or Riad in Marrakech."
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Pick-up between 8:00 AM and 9:00 AM from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Explore the Medina",
-        "description": "Stroll through the historic Medina of Essaouira, a UNESCO World Heritage site."
+        "name": "{{ __('Explore the Medina') }}",
+        "description": "{{ __('Stroll through the historic Medina of Essaouira, a UNESCO World Heritage site.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Admire the Skala",
-        "description": "Visit the Skala and take in breathtaking views of the Atlantic coast."
+        "name": "{{ __('Admire the Skala') }}",
+        "description": "{{ __('Visit the Skala and take in breathtaking views of the Atlantic coast.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Lunch by the Port",
-        "description": "Savor freshly caught seafood at a traditional restaurant near the port."
+        "name": "{{ __('Lunch by the Port') }}",
+        "description": "{{ __('Savor freshly caught seafood at a traditional restaurant near the port.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Camel Ride on the Beach",
-        "description": "Enjoy a peaceful camel ride along the Essaouira beach."
+        "name": "{{ __('Camel Ride on the Beach') }}",
+        "description": "{{ __('Enjoy a peaceful camel ride along the Essaouira beach.') }}"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "Visit the Jewish Quarter",
-        "description": "Explore the old Jewish Quarter and discover its rich history."
+        "name": "{{ __('Visit the Jewish Quarter') }}",
+        "description": "{{ __('Explore the old Jewish Quarter and discover its rich history.') }}"
       },
       {
         "@type": "ListItem",
         "position": 7,
-        "name": "Return to Marrakech",
-        "description": "Head back to Marrakech at 8:00 PM after a full day of exploration in Essaouira."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('Head back to Marrakech at 8:00 PM after a full day of exploration in Essaouira.') }}"
       }
     ]
   },
@@ -88,11 +88,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your full-day excursion to Essaouira from Marrakech. Enjoy camel rides, explore the medina, and indulge in fresh seafood by the coast."
+    "description": "{{ __('Book your full-day excursion to Essaouira from Marrakech. Enjoy camel rides, explore the medina, and indulge in fresh seafood by the coast.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

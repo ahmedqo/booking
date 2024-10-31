@@ -32,46 +32,46 @@
     {
       "@context": "https://schema.org",
       "@type": "TouristTrip",
-      "name": "Ouzoud Waterfalls Day Trip from Marrakech",
-      "description": "Escape Marrakech on a full-day trip to the breathtaking Ouzoud Waterfalls. Explore nature, spot wildlife, and enjoy a traditional Moroccan meal. The excursion includes hotel pick-up and free cancellation.",
+      "name": "{{ __('Ouzoud Waterfalls Day Trip from Marrakech') }}",
+      "description": "{{ __('Escape Marrakech on a full-day trip to the breathtaking Ouzoud Waterfalls. Explore nature, spot wildlife, and enjoy a traditional Moroccan meal. The excursion includes hotel pick-up and free cancellation.') }}",
       "image": [
         "{{ asset('img/ouzoud/ouzoud-1.webp') }}",
         "{{ asset('img/ouzoud/ouzoud-2.webp') }}",
         "{{ asset('img/ouzoud/ouzoud-3.webp') }}"
       ],
-      "touristType": "Nature Lovers, Families, Adventurers",
+      "touristType": "{{ __('Nature Lovers, Families, Adventurers') }}",
       "itinerary": {
         "@type": "ItemList",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Pick-up from Marrakech",
-            "description": "Pick-up between 8:00 AM & 9:00 AM from your hotel or Riad in Marrakech."
+            "name": "{{ __('Pick-up from Marrakech') }}",
+            "description": "{{ __('Pick-up between 8:00 AM & 9:00 AM from your hotel or Riad in Marrakech.') }}"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Journey to Ouzoud Falls",
-            "description": "Enjoy a scenic 3-hour drive through traditional Berber villages and olive groves."
+            "name": "{{ __('Journey to Ouzoud Falls') }}",
+            "description": "{{ __('Enjoy a scenic 3-hour drive through traditional Berber villages and olive groves.') }}"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Explore Ouzoud Falls",
-            "description": "Arrive at the Ouzoud Waterfalls and spend around four hours exploring. Swim in the natural pools, hike the trails, and admire the local wildlife, including Barbary macaques."
+            "name": "{{ __('Explore Ouzoud Falls') }}",
+            "description": "{{ __('Arrive at the Ouzoud Waterfalls and spend around four hours exploring. Swim in the natural pools, hike the trails, and admire the local wildlife, including Barbary macaques.') }}"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "name": "Traditional Moroccan Meal",
-            "description": "Savor an authentic Moroccan Tajine at a local restaurant near the falls."
+            "name": "{{ __('Traditional Moroccan Meal') }}",
+            "description": "{{ __('Savor an authentic Moroccan Tajine at a local restaurant near the falls.') }}"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "name": "Return to Marrakech",
-            "description": "Head back to Marrakech in the late afternoon, arriving around 8:00 PM, just in time for sunset."
+            "name": "{{ __('Return to Marrakech') }}",
+            "description": "{{ __('Head back to Marrakech in the late afternoon, arriving around 8:00 PM, just in time for sunset.') }}"
           }
         ]
       },
@@ -82,11 +82,11 @@
         "availability": "https://schema.org/InStock",
         "validFrom": "{{ now()->toIso8601String() }}",
         "url": "{{ route('views.excursions.ouzoud') }}",
-        "description": "Book your full-day trip to Ouzoud Falls from Marrakech, including hotel pick-up, scenic views, and a traditional Moroccan meal."
+        "description": "{{ __('Book your full-day trip to Ouzoud Falls from Marrakech, including hotel pick-up, scenic views, and a traditional Moroccan meal.') }}"
       },
       "provider": {
         "@type": "TouristInformationCenter",
-        "name": "Morocco Adventure City",
+        "name": "{{ __('Morocco Adventure City') }}",
         "url": "{{ route('views.guest.index')  }}",
         "logo": "{{ asset('img/logo.png') }}",
         "sameAs": [

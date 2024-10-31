@@ -26,53 +26,53 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "3-Day Merzouga Desert Tour from Marrakech | Camel Ride & Atlas Mountains",
-  "description": "Explore Morocco on a 3-day desert tour from Marrakech to Merzouga. Enjoy camel rides, visit Ait Ben Haddou, and experience Sahara desert.",
+  "name": "{{ __('3-Day Merzouga Desert Tour from Marrakech | Camel Ride & Atlas Mountains') }}",
+  "description": "{{ __('Explore Morocco on a 3-day desert tour from Marrakech to Merzouga. Enjoy camel rides, visit Ait Ben Haddou, and experience Sahara desert.') }}",
   "image": [
     "{{ asset('img/merzouga/merzouga-1.webp') }}",
     "{{ asset('img/merzouga/merzouga-2.webp') }}",
     "{{ asset('img/merzouga/merzouga-3.webp') }}",
     "{{ asset('img/merzouga/merzouga-4.webp') }}"
   ],
-  "touristType": "Adventurers, Culture Enthusiasts, Families",
+  "touristType": "{{ __('Adventurers, Culture Enthusiasts, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Departure from Marrakech",
-        "description": "Pick-up at 07:00 AM from your hotel or Riad in Marrakech."
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Pick-up at 07:00 AM from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Visit to Ait Ben Haddou",
-        "description": "Explore the famous Ait Ben Haddou Kasbah, a UNESCO World Heritage site."
+        "name": "{{ __('Visit to Ait Ben Haddou') }}",
+        "description": "{{ __('Explore the famous Ait Ben Haddou Kasbah, a UNESCO World Heritage site.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Lunch in Ouarzazate",
-        "description": "Enjoy a traditional Moroccan meal in Ouarzazate, also known as the 'Gateway to the Desert'."
+        "name": "{{ __('Lunch in Ouarzazate') }}",
+        "description": "{{ __('Enjoy a traditional Moroccan meal in Ouarzazate, also known as the \'Gateway to the Desert\'.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Drive through the Valley of a Thousand Kasbahs",
-        "description": "Marvel at the ancient kasbahs along the way as you continue towards Merzouga."
+        "name": "{{ __('Drive through the Valley of a Thousand Kasbahs') }}",
+        "description": "{{ __('Marvel at the ancient kasbahs along the way as you continue towards Merzouga.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Camel Ride and Overnight in Merzouga",
-        "description": "Ride camels into the Erg Chebbi dunes, enjoy a beautiful sunset, and spend the night in a desert camp under the stars."
+        "name": "{{ __('Camel Ride and Overnight in Merzouga') }}",
+        "description": "{{ __('Ride camels into the Erg Chebbi dunes, enjoy a beautiful sunset, and spend the night in a desert camp under the stars.') }}"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "Return to Marrakech",
-        "description": "After breakfast, head back to Marrakech, passing through Erfoud, Rissani, and Ouarzazate."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('After breakfast, head back to Marrakech, passing through Erfoud, Rissani, and Ouarzazate.') }}"
       }
     ]
   },
@@ -83,11 +83,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your 3-day Merzouga Desert Trip from Marrakech, including camel rides, a night in the desert, and visits to Ait Ben Haddou, the Dades Gorges, and more."
+    "description": "{{ __('Book your 3-day Merzouga Desert Trip from Marrakech, including camel rides, a night in the desert, and visits to Ait Ben Haddou, the Dades Gorges, and more.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

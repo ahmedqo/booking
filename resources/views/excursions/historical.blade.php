@@ -26,58 +26,58 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Marrakech Historical Tour: Palaces, Tombs & Souks",
-  "description": "Explore the rich history of Marrakech with visits to the Koutoubia Mosque, Bahia Palace, Saadian Tombs, Mellah, and vibrant souks on this 4-hour guided tour.",
+  "name": "{{ __('Marrakech Historical Tour: Palaces, Tombs & Souks') }}",
+  "description": "{{ __('Explore the rich history of Marrakech with visits to the Koutoubia Mosque, Bahia Palace, Saadian Tombs, Mellah, and vibrant souks on this 4-hour guided tour.') }}",
   "image": [
     "{{ asset('img/marrakech/marrakech-1.webp') }}",
     "{{ asset('img/marrakech/marrakech-2.webp') }}",
     "{{ asset('img/marrakech/marrakech-3.webp') }}"
   ],
-  "touristType": "Culture Enthusiasts, History Buffs, Families",
+  "touristType": "{{ __('Culture Enthusiasts, History Buffs, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up from your hotel or Riad in Marrakech between 9:00 AM and 10:00 AM."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up from your hotel or Riad in Marrakech between 9:00 AM and 10:00 AM.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Visit to Koutoubia Mosque",
-        "description": "Admire the exterior of the Koutoubia Mosque, one of Marrakech's most iconic landmarks."
+        "name": "{{ __('Visit to Koutoubia Mosque') }}",
+        "description": "{{ __('Admire the exterior of the Koutoubia Mosque, one of Marrakech\'s most iconic landmarks.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Visit to Mellah",
-        "description": "Explore the Mellah, Marrakech's historical Jewish Quarter."
+        "name": "{{ __('Visit to Mellah') }}",
+        "description": "{{ __('Explore the Mellah, Marrakech\'s historical Jewish Quarter.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Visit to Saadian Tombs",
-        "description": "Visit the Saadian Tombs, a resting place of Morocco’s past royalty."
+        "name": "{{ __('Visit to Saadian Tombs') }}",
+        "description": "{{ __('Visit the Saadian Tombs, a resting place of Morocco’s past royalty.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Visit to Bahia Palace",
-        "description": "Discover the stunning Bahia Palace with its intricate architecture and lush gardens."
+        "name": "{{ __('Visit to Bahia Palace') }}",
+        "description": "{{ __('Discover the stunning Bahia Palace with its intricate architecture and lush gardens.') }}"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "Explore the Souks",
-        "description": "Walk through the vibrant souks of Marrakech, where artisans sell their crafts."
+        "name": "{{ __('Explore the Souks') }}",
+        "description": "{{ __('Walk through the vibrant souks of Marrakech, where artisans sell their crafts.') }}"
       },
       {
         "@type": "ListItem",
         "position": 7,
-        "name": "Return to Marrakech",
-        "description": "End your historical tour and return to your hotel by 1:00 PM or 6:00 PM, depending on your chosen time slot."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('End your historical tour and return to your hotel by 1:00 PM or 6:00 PM, depending on your chosen time slot.') }}"
       }
     ]
   },
@@ -88,11 +88,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your 4-hour Marrakech Historical Tour and discover the Koutoubia Mosque, Bahia Palace, Saadian Tombs, and more."
+    "description": "{{ __('Book your 4-hour Marrakech Historical Tour and discover the Koutoubia Mosque, Bahia Palace, Saadian Tombs, and more.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

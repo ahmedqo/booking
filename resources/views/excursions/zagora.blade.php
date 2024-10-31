@@ -28,52 +28,52 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Best Zagora Sahara Desert Tour & Excursion From Marrakech – 2-Day Trip",
-  "description": "EDiscover the Zagora Sahara Desert on a 2-day excursion from Marrakech. Enjoy camel rides, visit Ait Ben Haddou, and experience a magical night for just €65.",
+  "name": "{{ __('Best Zagora Sahara Desert Tour & Excursion From Marrakech – 2-Day Trip') }}",
+  "description": "{{ __('EDiscover the Zagora Sahara Desert on a 2-day excursion from Marrakech. Enjoy camel rides, visit Ait Ben Haddou, and experience a magical night for just €65.') }}",
   "image": [
     "{{ asset('img/zagora/zagora-1.webp') }}",
     "{{ asset('img/zagora/zagora-2.webp') }}",
     "{{ asset('img/zagora/zagora-3.webp') }}"
   ],
-  "touristType": "Adventurers, Culture Enthusiasts, Families",
+  "touristType": "{{ __('Adventurers, Culture Enthusiasts, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Departure from Marrakech",
-        "description": "Pick-up between 7:00 AM from your hotel or Riad in Marrakech."
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Pick-up between 7:00 AM from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Visit to Ait Ben Haddou Kasbah",
-        "description": "Explore this UNESCO World Heritage site and learn about its rich history."
+        "name": "{{ __('Visit to Ait Ben Haddou Kasbah') }}",
+        "description": "{{ __('Explore this UNESCO World Heritage site and learn about its rich history.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Lunch in Ouarzazate",
-        "description": "Savor a traditional Moroccan meal in the ‘Hollywood of Africa’."
+        "name": "{{ __('Lunch in Ouarzazate') }}",
+        "description": "{{ __('Savor a traditional Moroccan meal in the ‘Hollywood of Africa’.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Camel ride and sunset in the Zagora Desert",
-        "description": "Ride camels through the desert and watch a beautiful sunset before heading to your desert camp."
+        "name": "{{ __('Camel ride and sunset in the Zagora Desert') }}",
+        "description": "{{ __('Ride camels through the desert and watch a beautiful sunset before heading to your desert camp.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Overnight in a desert camp",
-        "description": "Spend the night in a traditional desert bivouac under the stars."
+        "name": "{{ __('Overnight in a desert camp') }}",
+        "description": "{{ __('Spend the night in a traditional desert bivouac under the stars.') }}"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "Return to Marrakech",
-        "description": "After breakfast, head back to Marrakech, arriving in the late evening."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('After breakfast, head back to Marrakech, arriving in the late evening.') }}"
       }
     ]
   },
@@ -84,11 +84,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.excursions.zagora') }}",
-    "description": "Book your 2-day Zagora Desert Trip from Marrakech, including camel rides, a night in a desert camp, and a visit to Ouarzazate."
+    "description": "{{ __('Book your 2-day Zagora Desert Trip from Marrakech, including camel rides, a night in a desert camp, and a visit to Ouarzazate.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

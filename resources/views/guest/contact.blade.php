@@ -21,7 +21,7 @@
             "description": "{!! __('Get in touch with us for inquiries, feedback, or support. We value your questions and comments.') !!}",
             "publisher": {
                 "@type": "Organization",
-                "name": "Morocco Adventure City",
+                "name": "{{ __('Morocco Adventure City') }}",
                 "url": "{{ route('views.guest.index') }}",
                 "logo": {
                     "@type": "ImageObject",
@@ -89,7 +89,7 @@
                 </ul>
             </div>
             <div class="lg:col-span-3">
-                <form validate action="{{ route('actions.mail.send') }}" method="post"
+                <form validate action="{{ route('actions.mail.contact') }}" method="post"
                     class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 gap-6">
                     @csrf
                     <input type="hidden" name="type" value="contact" />

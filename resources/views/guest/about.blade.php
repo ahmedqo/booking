@@ -27,7 +27,7 @@
             "description": "{!! __('Morocco Adventure City is a leading travel agency offering a variety of services including accommodation and customized travel experiences.') !!}",
              "publisher": {
                 "@type": "Organization",
-                "name": "Morocco Adventure City",
+                "name": "{{ __('Morocco Adventure City') }}",
                 "url": "{{ route('views.guest.index') }}",
                 "logo": {
                     "@type": "ImageObject",

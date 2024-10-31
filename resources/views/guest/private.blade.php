@@ -27,7 +27,7 @@
             "description": "{!! __('Discover exclusive private excursions in Morocco, offering personalized experiences in stunning locations like the Sahara Desert and Marrakech.') !!}",
             "publisher": {
                 "@type": "Organization",
-                "name": "Morocco Adventure City",
+                "name": "{{ __('Morocco Adventure City') }}",
                 "url": "{{ route('views.guest.index') }}",
                 "logo": {
                     "@type": "ImageObject",

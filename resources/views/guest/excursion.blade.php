@@ -27,7 +27,7 @@
             "description": "{!! __('Explore our exciting excursions in Morocco, including trips to the Sahara Desert, Ouzoud Falls, and more.') !!}",
             "publisher": {
                 "@type": "Organization",
-                "name": "Morocco Adventure City",
+                "name": "{{ __('Morocco Adventure City') }}",
                 "url": "{{ route('views.guest.index') }}",
                 "logo": {
                     "@type": "ImageObject",

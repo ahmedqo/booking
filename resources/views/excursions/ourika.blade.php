@@ -25,53 +25,53 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Ourika Valley Tour and Excursion from Marrakech",
-  "description": "Escape Marrakech with a guided tour to Ourika Valley. Explore the stunning waterfalls, Berber villages, and authentic Moroccan culture on this full-day excursion.",
+  "name": "{{ __('Ourika Valley Tour and Excursion from Marrakech') }}",
+  "description": "{{ __('Escape Marrakech with a guided tour to Ourika Valley. Explore the stunning waterfalls, Berber villages, and authentic Moroccan culture on this full-day excursion.') }}",
   "image": [
     "{{ asset('img/ourika/ourika-1.webp') }}",
     "{{ asset('img/ourika/ourika-2.webp') }}",
     "{{ asset('img/ourika/ourika-3.webp') }}",
     "{{ asset('img/ourika/ourika-4.webp') }}"
   ],
-  "touristType": "Nature Enthusiasts, Culture Lovers, Families",
+  "touristType": "{{ __('Nature Enthusiasts, Culture Lovers, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Departure from Marrakech",
-        "description": "Pick-up between 9:00 AM and 10:00 AM from your hotel or Riad in Marrakech."
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Pick-up between 9:00 AM and 10:00 AM from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Visit to Argan Cooperative",
-        "description": "Stop by an Argan oil cooperative and learn about traditional methods of oil production."
+        "name": "{{ __('Visit to Argan Cooperative') }}",
+        "description": "{{ __('Stop by an Argan oil cooperative and learn about traditional methods of oil production.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Setti Fatma & Ourika Valley Waterfalls",
-        "description": "Hike to the stunning Setti Fatma waterfalls and enjoy the surrounding nature."
+        "name": "{{ __('Setti Fatma & Ourika Valley Waterfalls') }}",
+        "description": "{{ __('Hike to the stunning Setti Fatma waterfalls and enjoy the surrounding nature.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Lunch by the River",
-        "description": "Savor a traditional Moroccan lunch at a riverside restaurant with stunning views."
+        "name": "{{ __('Lunch by the River') }}",
+        "description": "{{ __('Savor a traditional Moroccan lunch at a riverside restaurant with stunning views.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Visit to Berber Villages",
-        "description": "Explore local Berber villages, experiencing traditional Moroccan culture."
+        "name": "{{ __('Visit to Berber Villages') }}",
+        "description": "{{ __('Explore local Berber villages, experiencing traditional Moroccan culture.') }}"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "Return to Marrakech",
-        "description": "Head back to Marrakech around 5:00 PM after a day filled with nature and culture."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('Head back to Marrakech around 5:00 PM after a day filled with nature and culture.') }}"
       }
     ]
   },
@@ -82,11 +82,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your full-day tour to Ourika Valley from Marrakech. Enjoy stunning nature, explore Berber villages, and hike to the famous waterfalls."
+    "description": "{{ __('Book your full-day tour to Ourika Valley from Marrakech. Enjoy stunning nature, explore Berber villages, and hike to the famous waterfalls.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [
@@ -234,7 +234,7 @@
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(
                                         __('Reaching the waterfalls is of course the high point of the walk. The cool, flowing water gives great relief and you will have enough time to relax, take photos, or even dip your feet in the water. The hike is appropriate for almost every fitness level, and your guide will make sure the speed is easy for all.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Lunch by the River: A Taste of Moroccan Flavors.'),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Lunch by the River: A Taste of Moroccan Flavors.'),
                                     ) }}
                                 </p>
                             </div>

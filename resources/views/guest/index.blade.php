@@ -22,7 +22,7 @@
         {
             "@context": "https://schema.org",
             "@type": "TravelAgency",
-            "name": "Morocco Adventure City",
+            "name": "{{ __('Morocco Adventure City') }}",
             "url": "{{ route('views.guest.index') }}",
             "logo": "{{ asset('img/logo.png') }}",
             "image": [

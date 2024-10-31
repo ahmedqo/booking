@@ -90,4 +90,5 @@ foreach ([
 }
 
 
-Route::post('/send-mail', [MailController::class, 'send'])->name('actions.mail.send');
+Route::post('/actions/contact', [MailController::class, 'contact'])->name('actions.mail.contact');
+Route::post('/actions/reserve', [MailController::class, 'reserve'])->name('actions.mail.reserve');

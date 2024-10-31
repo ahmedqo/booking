@@ -25,8 +25,8 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "4-Hour Marrakech Tour: Koutoubia Mosque, Majorelle Gardens & Souks",
-  "description": "Explore the best of Marrakech with visits to the iconic Koutoubia Mosque, vibrant Majorelle Gardens, and the bustling souks of the Medina on this 4-hour guided tour.",
+  "name": "{{ __('4-Hour Marrakech Tour: Koutoubia Mosque, Majorelle Gardens & Souks') }}",
+  "description": "{{ __('Explore the best of Marrakech with visits to the iconic Koutoubia Mosque, vibrant Majorelle Gardens, and the bustling souks of the Medina on this 4-hour guided tour.') }}",
   "image": [
     "{{ asset('img/majorelle/majorelle-1.webp') }}",
     "{{ asset('img/majorelle/majorelle-2.webp') }}",
@@ -35,39 +35,39 @@
     "{{ asset('img/majorelle/majorelle-5.webp') }}",
     "{{ asset('img/majorelle/majorelle-6.webp') }}"
   ], 
-  "touristType": "Culture Enthusiasts, Nature Lovers, Families",
+  "touristType": "{{ __('Culture Enthusiasts, Nature Lovers, Families') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up from your hotel or Riad in Marrakech between 9:00 AM and 10:00 AM or between 2:00 PM and 3:00 PM."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up from your hotel or Riad in Marrakech between 9:00 AM and 10:00 AM or between 2:00 PM and 3:00 PM.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Visit to Koutoubia Mosque",
-        "description": "Admire the stunning exterior of the Koutoubia Mosque, a 12th-century architectural gem."
+        "name": "{{ __('Visit to Koutoubia Mosque') }}",
+        "description": "{{ __('Admire the stunning exterior of the Koutoubia Mosque, a 12th-century architectural gem.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Visit to Majorelle Gardens",
-        "description": "Discover the lush greenery and exotic plants of the Majorelle Gardens, created by French painter Jacques Majorelle."
+        "name": "{{ __('Visit to Majorelle Gardens') }}",
+        "description": "{{ __('Discover the lush greenery and exotic plants of the Majorelle Gardens, created by French painter Jacques Majorelle.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Explore the Souks",
-        "description": "Stroll through the lively souks of Marrakech, filled with local crafts, spices, and treasures."
+        "name": "{{ __('Explore the Souks') }}",
+        "description": "{{ __('Stroll through the lively souks of Marrakech, filled with local crafts, spices, and treasures.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Return to Marrakech",
-        "description": "End your tour with a return to your hotel or Riad by 1:00 PM or 6:00 PM."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('End your tour with a return to your hotel or Riad by 1:00 PM or 6:00 PM.') }}"
       }
     ]
   },
@@ -78,11 +78,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your 4-hour tour to explore Marrakech's highlights including Koutoubia Mosque, Majorelle Gardens, and the vibrant souks."
+    "description": "{{ __('Book your 4-hour tour to explore Marrakech\'s highlights including Koutoubia Mosque, Majorelle Gardens, and the vibrant souks.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [

@@ -25,8 +25,8 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Chez Ali Marrakech: Magical Night of Fantasia & Dinner",
-  "description": "Experience an enchanting evening at Chez Ali Marrakech with a traditional dinner, captivating Fantasia show, Berber dancers, horseback acrobats, and fireworks.",
+  "name": "{{ __('Chez Ali Marrakech: Magical Night of Fantasia & Dinner') }}",
+  "description": "{{ __('Experience an enchanting evening at Chez Ali Marrakech with a traditional dinner, captivating Fantasia show, Berber dancers, horseback acrobats, and fireworks.') }}",
   "image": [
     "{{ asset('img/ali/chezali-1.webp') }}",
     "{{ asset('img/ali/chezali-2.webp') }}",
@@ -37,39 +37,39 @@
     "{{ asset('img/ali/chezali-7.webp') }}",
     "{{ asset('img/ali/chezali-8.webp') }}"
   ],
-  "touristType": "Culture Enthusiasts, Families, Adventure Seekers",
+  "touristType": "{{ __('Culture Enthusiasts, Families, Adventure Seekers') }}",
   "itinerary": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Pick-up from Marrakech",
-        "description": "Pick-up between 7:30 PM and 8:30 PM from your hotel or Riad in Marrakech."
+        "name": "{{ __('Pick-up from Marrakech') }}",
+        "description": "{{ __('Pick-up between 7:30 PM and 8:30 PM from your hotel or Riad in Marrakech.') }}"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Traditional Berber Welcome",
-        "description": "Be welcomed by Berber troops with traditional chants and dances as you enter the Chez Ali complex."
+        "name": "{{ __('Traditional Berber Welcome') }}",
+        "description": "{{ __('Be welcomed by Berber troops with traditional chants and dances as you enter the Chez Ali complex.') }}"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Dinner Under a Caidal Tent",
-        "description": "Enjoy a traditional Moroccan dinner under a Berber tent while watching parades of Morocco's diverse tribes."
+        "name": "{{ __('Dinner Under a Caidal Tent') }}",
+        "description": "{{ __('Enjoy a traditional Moroccan dinner under a Berber tent while watching parades of Morocco\'s diverse tribes.') }}"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Fantasia Show",
-        "description": "Admire the famous Fantasia show with acrobatic horseback riders, belly dancers, flying carpet performances, and fireworks."
+        "name": "{{ __('Fantasia Show') }}",
+        "description": "{{ __('Admire the famous Fantasia show with acrobatic horseback riders, belly dancers, flying carpet performances, and fireworks.') }}"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Return to Marrakech",
-        "description": "After the spectacular show, return to Marrakech around 11:30 PM."
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('After the spectacular show, return to Marrakech around 11:30 PM.') }}"
       }
     ]
   },
@@ -80,11 +80,11 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "{{ now()->toIso8601String() }}",
     "url": "{{ route('views.guest.excursion') }}",
-    "description": "Book your Chez Ali Marrakech evening tour with Moroccan Adventure City. Enjoy a magical dinner and Fantasia show with Berber performers, acrobats, and fireworks."
+    "description": "{{ __('Book your Chez Ali Marrakech evening tour with Moroccan Adventure City. Enjoy a magical dinner and Fantasia show with Berber performers, acrobats, and fireworks.') }}"
   },
   "provider": {
     "@type": "TouristInformationCenter",
-    "name": "Morocco Adventure City",
+    "name": "{{ __('Morocco Adventure City') }}",
     "url": "{{ route('views.guest.index') }}",
     "logo": "{{ asset('img/logo.png') }}",
     "sameAs": [
@@ -144,6 +144,9 @@
                         <div class="p-6 text-red-500 font-x-huge text-4xl bg-x-white text-center">
                             {{ __('45 € / Person') }}
                         </div>
+                        <div class="p-4 text-x-black font-x-thin text-lg bg-x-white text-center">
+                            {{ __('Children aged 5 to 10 receive a 50% discount, and children under 5 are free') }}
+                        </div>
                     </div>
                     <a href="#reservation"
                         class="flex w-full items-center justify-center px-10 py-4 font-x-huge rounded-x-huge text-x-white text-2xl outline-none bg-teal-500 hover:bg-teal-400 focus:bg-teal-400 relative isolate">
@@ -191,6 +194,23 @@
                 </div>
                 <div class="flex flex-col gap-4">
                     <h2 class="font-x-thin text-2xl text-x-acent">
+                        {{ ucwords(__('Menu')) }}
+                    </h2>
+                    <div class="border border-x-shade rounded-x-huge p-6">
+                        @include('shared.guest.list', [
+                            'list' => [
+                                __('Moroccan Harira'),
+                                __('Chicken Tagine with Lemon / Meat Tagine with Prunes / Vegetarian Tagine'),
+                                __('Couscous with Seven Vegetables'),
+                                __('Seasonal Fruits'),
+                                __('Mint Tea'),
+                                __('Moroccan Pastries'),
+                            ],
+                        ])
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h2 class="font-x-thin text-2xl text-x-acent">
                         {{ ucwords(__('Description')) }}
                     </h2>
                     <div class="border border-x-shade rounded-x-huge p-6">
@@ -205,7 +225,6 @@
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('As soon as you set foot in Chez Ali Marrakech, you\'ll be met with a friendly embrace from the Berber troops, who will start your journey with traditional chants and dances. You will be called to your table inside a traditional caidal tent through the colorful and lively atmosphere as you make your way. Get ready to be enchanted by the charm and energy of Morocco\'s One Thousand and One Nights.')) }}
                                 </p>
-
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
@@ -247,6 +266,9 @@
                         class="flex flex-col gap-px border border-x-shade bg-x-shade shadow-md rounded-x-huge overflow-hidden">
                         <div class="p-6 text-red-500 font-x-huge text-4xl bg-x-white text-center">
                             {{ __('45 € / Person') }}
+                        </div>
+                        <div class="p-4 text-x-black font-x-thin text-lg bg-x-white text-center">
+                            {{ __('Children aged 5 to 10 receive a 50% discount, and children under 5 are free') }}
                         </div>
                     </div>
                     <a href="#reservation"

@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Address;
 
 class MailController extends Controller
 {
-    public function send(Request $Request)
+    public function contact(Request $Request)
     {
         $validator = Validator::make($Request->all(), [
             'name' => ['required', 'string'],
@@ -28,7 +28,55 @@ class MailController extends Controller
         }
 
         Mailler::plain([
-            'subject' => $Request->type == 'contact' ? __('Thank you for contacting Morocco Adventure City') : __('Thank you for your reservation at Morocco Adventure City'),
+            'subject' => __('Thank you for contacting Morocco Adventure City'),
+            'from' => new Address(env('MAIL_CONTACT_ADDRESS'), env('MAIL_NAME')),
+            'to' => new Address($Request->email, $Request->name),
+            'content' => [__('We have received your message and will get back to you as soon as possible.'), __('Thank you for reaching out to us.')]
+        ]);
+
+        Mailler::alert([
+            'subject' => __('New Contact Submission'),
+            'from' => new Address($Request->email, $Request->name),
+            'to' => new Address(env('MAIL_CONTACT_ADDRESS'), env('MAIL_NAME')),
+            'content' => (object) [
+                'type' => $Request->type,
+                'name' => $Request->name,
+                'email' => $Request->email,
+                'phone' => $Request->phone,
+                'country' => $Request->country,
+                'message' => $Request->message,
+            ]
+        ]);
+
+        return Redirect::back()->with([
+            'message' => $Request->type == 'contact' ? __('Your message has been sent successfully.') : __('Your reservation has been successfully completed.'),
+            'type' => 'success'
+        ]);
+    }
+
+    public function reserve(Request $Request)
+    {
+        $validator = Validator::make($Request->all(), [
+            'last_name' => ['required', 'string'],
+            'first_name' => ['required', 'string'],
+            'pick_up_location' => ['required', 'string'],
+            'number_of_people' => ['required', 'string'],
+            'date' =>  ['required', 'date', 'after:today'],
+            'country' => ['required', 'string'],
+            'phone' => ['required', 'string'],
+            'email' => ['required', 'email'],
+            'message' => ['required', 'string'],
+        ]);
+
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->with([
+                'message' => $validator->errors()->all(),
+                'type' => 'error'
+            ]);
+        }
+
+        Mailler::plain([
+            'subject' => __('Thank you for your reservation at Morocco Adventure City'),
             'from' => new Address(env('MAIL_CONTACT_ADDRESS'), env('MAIL_NAME')),
             'to' => new Address($Request->email, $Request->name),
             'content' => [__('We have received your message and will get back to you as soon as possible.'), __('Thank you for reaching out to us.')]
@@ -36,12 +84,16 @@ class MailController extends Controller
 
         foreach ([env('MAIL_CONTACT_ADDRESS'), "ahmedqo1995@gmail.com"] as $email) {
             Mailler::alert([
-                'subject' => $Request->type == 'contact' ? __('New Contact Submission') : __('New Reservation Submission'),
-                'from' => $Request->type == 'contact' ? new Address($Request->email, $Request->name) : new Address(env('MAIL_NOREPLAY_ADDRESS'), env('MAIL_NAME')),
+                'subject' => __('New Reservation Submission'),
+                'from' =>  new Address(env('MAIL_NOREPLAY_ADDRESS'), env('MAIL_NAME')),
                 'to' => new Address($email, env('MAIL_NAME')),
                 'content' => (object) [
                     'type' => $Request->type,
-                    'name' => $Request->name,
+                    'first_name' => $Request->first_name,
+                    'last_name' => $Request->last_name,
+                    'pick_up_location' => $Request->pick_up_location,
+                    'number_of_people' => $Request->number_of_people,
+                    'date' => $Request->date,
                     'email' => $Request->email,
                     'phone' => $Request->phone,
                     'country' => $Request->country,
