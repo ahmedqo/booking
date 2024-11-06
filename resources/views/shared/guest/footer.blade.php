@@ -74,8 +74,8 @@
                 <form action="">
                     @csrf
                     <div class="newsletter flex flex-wrap rounded-x-thin overflow-hidden">
-                        <neo-textbox class="w-0 flex-1 rounded-none bg-gray-600" type="email" name="email"
-                            label="{{ __('Email') }}"></neo-textbox>
+                        <neo-textbox class="w-0 flex-1 py-0 rounded-none bg-gray-600" type="email" name="email"
+                            placeholder="{{ __('Email') }}"></neo-textbox>
                         <neo-button class="rounded-none px-4 py-3">
                             <svg class="w-6 h-6 text-x-white pointer-events-none" fill="currentColor"
                                 viewBox="0 -960 960 960">
