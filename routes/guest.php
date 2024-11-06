@@ -3,12 +3,6 @@
 use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/language/{locale}', function ($locale) {
-    app()->setlocale($locale);
-    session()->put('locale', $locale);
-    return redirect()->back();
-})->name('actions.language.index');
-
 Route::view('/', 'guest.index')->name('views.guest.index');
 Route::view('/about-us', 'guest.about')->name('views.guest.about');
 Route::view('/contact-us', 'guest.contact')->name('views.guest.contact');

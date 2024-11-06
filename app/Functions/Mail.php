@@ -3,7 +3,7 @@
 namespace App\Functions;
 
 use App\Mail\{
-    // Reset as ResetMail,
+    Reset as ResetMail,
     Plain as PlainMail,
     Alert as AlertMail
 };
@@ -17,41 +17,39 @@ use Illuminate\Mail\Mailables\Address;
 
 class Mail
 {
-    // public const FORGOT = "FORGOT";
+    public const FORGOT = "FORGOT";
 
-    // public static function reset($email)
-    // {
-    //     $user = User::where('email', $email)->first();
+    public static function reset($email)
+    {
+        $user = User::where('email', $email)->first();
 
-    //     if (!$user) {
-    //         return false;
-    //     }
+        if (!$user) {
+            return false;
+        }
 
-    //     $token = Str::random(20);
+        $token = Str::random(20);
 
-    //     $row = DB::table('password_reset_tokens')->where('email', $user->email)->first();
+        $row = DB::table('password_reset_tokens')->where('email', $user->email)->first();
 
-    //     if (!$row) {
-    //         DB::table('password_reset_tokens')->insert([
-    //             'email' => $user->email,
-    //             'token' => $token,
-    //         ]);
-    //     } else {
-    //         DB::table('password_reset_tokens')->where('email', $user->email)->update([
-    //             'token' => $token,
-    //         ]);
-    //     }
+        if (!$row) {
+            DB::table('password_reset_tokens')->insert([
+                'email' => $user->email,
+                'token' => $token,
+            ]);
+        } else {
+            DB::table('password_reset_tokens')->where('email', $user->email)->update([
+                'token' => $token,
+            ]);
+        }
 
-    //     $mail = new ResetMail([
-    //         'token' => $token,
-    //         'logo' => $user->Owner ? $user->Owner->Image->Link : asset('img/logo.png'),
-    //         'to' => new Address($user->email, strtoupper($user->last_name) . ' ' . ucfirst($user->first_name)),
-    //         'color' => $user->Setting ? Core::themesList($user->Setting->theme_color)[0] : '33 150 243',
-    //     ]);
-    //     Mailer::send($mail);
+        $mail = new ResetMail([
+            'token' => $token,
+            'to' => new Address($user->email, strtoupper($user->last_name) . ' ' . ucfirst($user->first_name)),
+        ]);
+        Mailer::send($mail);
 
-    //     return true;
-    // }
+        return true;
+    }
 
     public static function plain($data)
     {

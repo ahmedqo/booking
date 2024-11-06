@@ -31,7 +31,7 @@
         @include('shared.guest.footer')
     </neo-wrapper>
     <neo-toaster horisontal="end" vertical="start" class="full-size"></neo-toaster>
-    @include('shared.base.scripts')
+    @include('shared.base.scripts', ['type' => 'guest'])
     @yield('scripts')
 </body>
 

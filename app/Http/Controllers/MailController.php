@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Functions\Mail as Mailler;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
@@ -39,7 +40,7 @@ class MailController extends Controller
             'from' => new Address($Request->email, $Request->name),
             'to' => new Address(env('MAIL_CONTACT_ADDRESS'), env('MAIL_NAME')),
             'content' => (object) [
-                'type' => $Request->type,
+                'excursion' => $Request->excursion,
                 'name' => $Request->name,
                 'email' => $Request->email,
                 'phone' => $Request->phone,
@@ -65,7 +66,6 @@ class MailController extends Controller
             'country' => ['required', 'string'],
             'phone' => ['required', 'string'],
             'email' => ['required', 'email'],
-            'message' => ['required', 'string'],
         ]);
 
         if ($validator->fails()) {
@@ -74,6 +74,8 @@ class MailController extends Controller
                 'type' => 'error'
             ]);
         }
+
+        $Reservation = Reservation::create($Request->all());
 
         Mailler::plain([
             'subject' => __('Thank you for your reservation at Morocco Adventure City'),
@@ -87,18 +89,7 @@ class MailController extends Controller
                 'subject' => __('New Reservation Submission'),
                 'from' =>  new Address(env('MAIL_NOREPLAY_ADDRESS'), env('MAIL_NAME')),
                 'to' => new Address($email, env('MAIL_NAME')),
-                'content' => (object) [
-                    'type' => $Request->type,
-                    'first_name' => $Request->first_name,
-                    'last_name' => $Request->last_name,
-                    'pick_up_location' => $Request->pick_up_location,
-                    'number_of_people' => $Request->number_of_people,
-                    'date' => $Request->date,
-                    'email' => $Request->email,
-                    'phone' => $Request->phone,
-                    'country' => $Request->country,
-                    'message' => $Request->message,
-                ]
+                'content' => $Reservation
             ]);
         }
 

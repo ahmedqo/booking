@@ -28,6 +28,7 @@ class Core
                 ),
                 'price' => '150',
                 'time' => '4 ' . __('hours'),
+                'hours' => 4,
                 'url' => route('views.privates.ouzoud'),
             ],
             (object) [
@@ -38,6 +39,7 @@ class Core
                 ),
                 'price' => '280',
                 'time' => '2 ' . __('days') . ' / 1 ' . __('nights'),
+                'hours' => 48,
                 'url' => route('views.privates.zagora'),
             ],
             (object) [
@@ -48,6 +50,7 @@ class Core
                 ),
                 'price' => '450',
                 'time' => '3 ' . __('days') . ' / 2 ' . __('nights'),
+                'hours' => 72,
                 'url' => route('views.privates.merzouga'),
             ],
             (object) [
@@ -56,6 +59,7 @@ class Core
                 'desc' => __('Combining visits to both Merzouga and Zagora offers a exploration of Morocco\'s desert'),
                 'price' => '600',
                 'time' => '4 ' . __('days') . ' / 3 ' . __('nights'),
+                'hours' => 96,
                 'url' => route('views.privates.zagmer'),
             ],
             (object) [
@@ -66,6 +70,7 @@ class Core
                 ),
                 'price' => '150',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.privates.essaouira'),
             ],
             (object) [
@@ -76,6 +81,7 @@ class Core
                 ),
                 'price' => '90',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.privates.ourika'),
             ],
             (object) [
@@ -84,6 +90,7 @@ class Core
                 'desc' => __('Embarking on a trip to Ouarzazate promises a captivating journey through Morocco\'s'),
                 'price' => '160',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.privates.ouarzazate'),
             ],
         ]) : collect([
@@ -95,6 +102,7 @@ class Core
                 ),
                 'price' => '20',
                 'time' => '4 ' . __('hours'),
+                'hours' => 4,
                 'url' => route('views.excursions.ouzoud'),
             ],
             (object) [
@@ -105,6 +113,7 @@ class Core
                 ),
                 'price' => '65',
                 'time' => '2 ' . __('days') . ' / 1 ' . __('nights'),
+                'hours' => 48,
                 'url' => route('views.excursions.zagora'),
             ],
             (object) [
@@ -115,6 +124,7 @@ class Core
                 ),
                 'price' => '85',
                 'time' => '3 ' . __('days') . ' / 2 ' . __('nights'),
+                'hours' => 72,
                 'url' => route('views.excursions.merzouga'),
             ],
             (object) [
@@ -123,6 +133,7 @@ class Core
                 'desc' => __('Combining visits to both Merzouga and Zagora offers a exploration of Morocco\'s desert'),
                 'price' => '145',
                 'time' => '4 ' . __('days') . ' / 3 ' . __('nights'),
+                'hours' => 96,
                 'url' => route('views.excursions.zagmer'),
             ],
             (object) [
@@ -133,6 +144,7 @@ class Core
                 ),
                 'price' => '20',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.excursions.essaouira'),
             ],
             (object) [
@@ -143,6 +155,7 @@ class Core
                 ),
                 'price' => '15',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.excursions.ourika'),
             ],
             (object) [
@@ -153,6 +166,7 @@ class Core
                 ),
                 'price' => '10',
                 'time' => '4 ' . __('hours'),
+                'hours' => 4,
                 'url' => route('views.excursions.historical'),
             ],
             (object) [
@@ -161,6 +175,7 @@ class Core
                 'desc' => __('Exploring the Majorelle Gardens and the bustling souks of Marrakech'),
                 'price' => '20',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.excursions.majorelle'),
             ],
             (object) [
@@ -169,6 +184,7 @@ class Core
                 'desc' => __('Embarking on a trip to Ouarzazate promises a captivating journey through Morocco\'s'),
                 'price' => '30',
                 'time' => '1 ' . __('day'),
+                'hours' => 24,
                 'url' => route('views.excursions.ouarzazate'),
             ],
             (object) [
@@ -179,6 +195,7 @@ class Core
                 ),
                 'price' => '45',
                 'time' => '4 ' . __('hours'),
+                'hours' => 4,
                 'url' => route('views.excursions.ali'),
             ],
             (object) [
@@ -189,6 +206,7 @@ class Core
                 ),
                 'price' => '30',
                 'time' => '2 ' . __('hours'),
+                'hours' => 2,
                 'url' => route('views.excursions.quad'),
             ],
             (object) [
@@ -199,6 +217,7 @@ class Core
                 ),
                 'price' => '90',
                 'time' => '2 ' . __('hours'),
+                'hours' => 2,
                 'url' => route('views.excursions.buggy'),
             ],
             (object) [
@@ -209,6 +228,7 @@ class Core
                 ),
                 'price' => '20',
                 'time' => '2 ' . __('hours'),
+                'hours' => 2,
                 'url' => route('views.excursions.camel'),
             ],
         ]);
@@ -232,6 +252,11 @@ class Core
     public static function lang($lang = null)
     {
         return $lang ? app()->getLocale() == $lang : app()->getLocale();
+    }
+
+    public static function genderList()
+    {
+        return ['male', 'female'];
     }
 
     public static function pickupList()

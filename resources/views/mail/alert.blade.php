@@ -9,7 +9,7 @@
                 </a>
                 <div style="background:#fcfcfc; padding: 44px 20px; border-radius: 10px;">
                     @php
-                        $type = $data['content']->type != 'contact';
+                        $type = $data['content']->excursion != 'contact';
                     @endphp
                     <div style="border: 1px solid #343434; border-radius: 4px; padding: 8px 16px; margin-bottom: 24px">
                         <span style="display: block; font-size: 14px; font-weight: 800; color: #1d1d1d;">
@@ -17,7 +17,7 @@
                         </span>
                         <span
                             style="display: block; font-size: 16px; font-weight: 600; color: #1d1d1d99; margin-top: 3px">
-                            {{ ucwords($data['content']->type) }}
+                            {{ ucwords($data['content']->excursion) }}
                         </span>
                     </div>
                     <div style="border: 1px solid #343434; border-radius: 4px; padding: 8px 16px; margin-bottom: 24px">
