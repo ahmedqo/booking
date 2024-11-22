@@ -1,11 +1,157 @@
 @extends('shared.guest.base')
-@section('title', ucwords(__('private excursion to essaouira from marrakech')) . ' | ' . __('Morocco Adventure City'))
+@section('title', ucwords(__('Private Day Trip to Essaouira From Marrakech')))
 @php
     Core::$route = 2;
 @endphp
+@section('meta')
+    <!-- Meta Descriptions -->
+    <meta name="description" content="{!! __(
+        'Book a private day trip to Essaouira from Marrakech. Explore the Medina, Skala ramparts, enjoy fresh seafood, camel rides, and discover its rich history.',
+    ) !!}">
+    <meta property="og:description" content="{!! __(
+        'Book a private day trip to Essaouira from Marrakech. Explore the Medina, Skala ramparts, enjoy fresh seafood, camel rides, and discover its rich history.',
+    ) !!}">
+    <meta name="twitter:description" content="{!! __(
+        'Book a private day trip to Essaouira from Marrakech. Explore the Medina, Skala ramparts, enjoy fresh seafood, camel rides, and discover its rich history.',
+    ) !!}">
+    <!-- Meta Titles -->
+    <meta property="og:title" content="{{ __('Morocco Adventure City') }}">
+    <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
+
+    <!-- Meta Images -->
+    <meta property="og:image" content="{{ asset('img/essaouira/essaouira-1.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/essaouira/essaouira-1.webp') }}">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "{{ __('Private Day Trip to Essaouira From Marrakech') }}",
+  "description": "{{ __('Book a private day trip to Essaouira from Marrakech. Explore the Medina, Skala ramparts, enjoy fresh seafood, camel rides, and discover its rich history.') }}",
+  "image": [
+    "{{ asset('img/essaouira/essaouira-1.webp') }}",
+    "{{ asset('img/essaouira/essaouira-2.webp') }}",
+    "{{ asset('img/essaouira/essaouira-3.webp') }}"
+  ],
+  "touristType": "{{  __('Culture Enthusiasts, Food Lovers, Coastal Explorers') }}",
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Begin your journey with a private pick-up from your hotel or Riad in Marrakech, traveling through scenic Moroccan countryside.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ __('Arrival in Essaouira') }}",
+        "description": "{{ __('Arrive at the coastal city of Essaouira, a UNESCO World Heritage site, known for its relaxed vibe and stunning seascapes.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ __('Explore the Medina') }}",
+        "description": "{{ __('Discover Essaouira's vibrant Medina with narrow alleys, art galleries, and boutique shops at your own pace.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "{{ __('Visit the Skala Ramparts') }}",
+        "description": "{{ __('Walk along the fortified Skala ramparts for breathtaking views of the Atlantic Ocean and historic cannons.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "{{ __('Savor Fresh Seafood') }}",
+        "description": "{{ __('Enjoy freshly caught seafood at a traditional Essaouira restaurant, a must-try culinary experience.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "{{ __('Optional Camel Ride') }}",
+        "description": "{{ __('Take a peaceful camel ride along Essaouira's beach, a unique way to enjoy the coastal scenery.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "{{ __('Explore the Jewish Quarter') }}",
+        "description": "{{ __('Discover the history and culture of Essaouira's Jewish quarter, including centuries-old synagogues.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('Relax on your journey back to Marrakech, arriving at your hotel or Riad around 8:00 PM.') }}"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "150",
+      "description": "{{ __('Price for 2 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "170",
+      "description": "{{ __('Price for 8 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 8
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "180",
+      "description": "{{ __('Price for 18 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 18
+      }
+    }
+  ],
+  "provider": {
+    "@type": "TouristInformationCenter",
+    "name": "{{ __('Morocco Adventure City') }}",
+    "url": "{{ route('views.guest.index') }}",
+    "logo": "{{ asset('img/logo.png') }}",
+    "sameAs": [
+      "https://www.facebook.com/moroccoadventurecity",
+      "https://www.instagram.com/moroccoadventurecity",
+      "https://twitter.com/moroccoadventurecity"
+    ],
+    "telephone": "{{ env('APP_PHONE_NUMBER') }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ env('APP_EMAIL_ADDRESS') }}",
+      "addressLocality": "Marrakech",
+      "addressRegion": "Marrakech-Safi",
+      "postalCode": "40000",
+      "addressCountry": "MA"
+    }
+  },
+  "duration": "P1D",
+  "startDate": "{{ now()->toIso8601String() }}",
+  "endDate": "{{ now()->toIso8601String() }}"
+}
+</script>
+
+
+@endsection
+
+
+
 @section('content')
     @include('shared.guest.topbar', [
-        'title' => __('private excursion to essaouira from marrakech'),
+        'title' => __('Private Day Trip to Essaouira From Marrakech'),
         'start' => [route('views.guest.private'), __('Private Excursions')],
         'end' => __('Excursions'),
     ])
@@ -14,7 +160,7 @@
             <div class="lg:col-span-2 flex flex-col gap-10">
                 <div class="flex flex-col gap-4">
                     @include('shared.guest.slider', [
-                        'alt' => 'a day in essaouira image',
+                        'alt' => __('a day in essaouira image'),
                         'img' => [
                             asset('img/essaouira/essaouira-1.webp'),
                             asset('img/essaouira/essaouira-2.webp'),
@@ -68,13 +214,13 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Duration: 1 day'),
-                                __('Pick-up between 8:00 AM & 9:00 AM, depending on the location of your hotel'),
-                                __('Return at 8:00 PM'),
-                                __('Immediate confirmation'),
+                                __('Duration: Full Day'),
+                                __('Pick-up: Between 8:00 AM and 9:00 AM, depending on your hotel location'),
+                                __('Return: Approximately 8:00 PM'),
+                                __('Instant booking confirmation'),
                                 __(
-                                    'Pick-up at your hotel or Riad in Marrakech. If your Riad is located in the Medina, pick-up will be arranged at an accessible location, as close as possible to your Riad or hotel'),
-                                __('Free cancellation'),
+                                    'Hotel or Riad pick-up in Marrakech included. For Medina locations, pick-up will be arranged at the nearest accessible point'),
+                                __('Free cancellation available'),
                             ],
                         ])
                     </div>
@@ -86,12 +232,13 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Stroll through the old Medina and its ramparts'),
+                                __('Discover Essaouira\'s UNESCO-listed Medina at your own pace.'),
+                                __('Marvel at the Skala ramparts with panoramic views of the Atlantic Ocean.'),
+                                __('Savor the freshest seafood in local restaurants.'),
                                 __(
-                                    'Discover the magnificent port city of Essaouira and the warm hospitality of its inhabitants'),
-                                __('Visit the Skala and its cannons'),
-                                __('Explore the ancient Jewish quarter'),
-                                __('Admire the beach, the port, the souks, the Medina, and the craft galleries'),
+                                    'Enjoy optional activities like a camel ride or a visit to the Jewish quarter.'),
+                                __(
+                                    'Travel in style with a private vehicle, ensuring comfort and flexibility throughout the day.'),
                             ],
                         ])
                     </div>
@@ -103,59 +250,86 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
                             <div class="flex flex-col gap-2">
-                                <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Explore Essaouira from Marrakech: A Cultural and Coastal Getaway')) }}
+                                <h3 class="font-x-huge text-xl text-x-black">
+                                    {{ ucwords(__('Private Day Trip to Essaouira From Marrakech: A Coastal Escape Like No Other')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Embark on a journey to discover Essaouira from Marrakech for a memorable day. This excursion will take you through an experience rich in culture, cuisine, and breathtaking landscapes.')) }}
+                                    {{ ucfirst(__('Looking for a personalized and enriching experience away from the bustling streets of Marrakech? This private day trip to Essaouira from Marrakech offers a perfect balance of culture, history, and coastal beauty. With a tailored itinerary designed just for you, this excursion ensures an unforgettable journey filled with picturesque landscapes, delicious cuisine, and unique cultural experiences.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Departure from Marrakech')) }}
+                                    {{ ucwords(__('Departure From Marrakech: Your Private Adventure Begins')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your journey begins in the morning, at 9:00 AM, from the enchanting city of Marrakech. You\'ll be amazed by the picturesque landscapes throughout the journey, providing you with the opportunity to capture unforgettable photos. Around 11:00 AM, you\'ll arrive in Essaouira, the timeless port city.')) }}
+                                    {{ ucfirst(__('Your journey begins at 9:00 AM as your private driver picks you up from your hotel or riad in Marrakech. Unlike group tours, this exclusive excursion gives you the flexibility to enjoy the journey at your own pace. Sit back and relax as you travel through scenic Moroccan countryside, dotted with argan trees and local villages. Feel free to stop along the way for photos or a coffee break, immersing yourself in the serene surroundings.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Exploration of the Medina')) }}
+                                    {{ ucwords(__('Arrival in Essaouira: The Jewel of the Atlantic')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Once in Essaouira, immerse yourself in the enchanting atmosphere of the Medina. The city\'s ramparts welcome you to a unique cultural experience. Explore the narrow winding streets, where history is engraved in every stone. The city\'s many art galleries testify to its cultural richness.')) }}
+                                    {{ ucfirst(__('By 11:00 AM, you\'ll arrive in the historic coastal city of Essaouira, a UNESCO World Heritage site. Known for its relaxed vibe, this charming port city boasts a perfect blend of culture, art, and stunning seascapes.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Discovery of the Architecture')) }}
+                                    {{ ucwords(__('A Private Stroll Through the Medina')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Admire the well-preserved architecture of the old buildings in Essaouira, which tell the story of this coastal city. Don\'t miss the Skala, where you can enjoy breathtaking views of the Atlantic coast.')) }}
+                                    {{ ucfirst(__('Your first stop is the Essaouira Medina, a maze of narrow alleys filled with vibrant colors and traditional charm. As you explore, your guide will share fascinating stories about the city\'s history, offering a personalized glimpse into its past. Unlike crowded tours, this private excursion allows you to linger at art galleries, boutique shops, or quiet corners to soak in the magical atmosphere.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Flavors of the Sea')) }}
+                                    {{ ucwords(__('Discover Essaouira\'s Unique Architecture')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your visit wouldn\'t be complete without tasting freshly caught fish in one of the many small traditional restaurants in Essaouira. Indulge in the flavors of the sea and local cuisine.')) }}
+                                    {{ ucfirst(__('Essaouira\'s distinctive architecture reflects its rich history as a meeting point of cultures. Wander along the city\'s ramparts, fortified walls overlooking the Atlantic Ocean. The Skala de la Kasbah, with its rows of cannons and panoramic views, is a highlight of any visit. Your guide can help you discover hidden gems, from intricately designed doors to well-preserved colonial buildings.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Camel Ride and Jewish Quarter Tour')) }}
+                                    {{ ucwords(__('A Taste of the Sea: Fresh Seafood Delights')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After enjoying a delicious meal, embark on a camel ride along the beach, an unforgettable experience for both young and old. You can also visit the old Jewish quarter of Essaouira, where you\'ll discover historical synagogues and the fascinating history surrounding them.')) }}
+                                    {{ ucfirst(__('No trip to Essaouira would be complete without indulging in its renowned seafood. Your guide will take you to one of the city\'s finest local restaurants, where you can savor freshly caught fish, grilled to perfection. Whether you\'re a seafood lover or looking to try something new, this meal is a feast for the senses')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h3 class="font-x-huge text-xl text-x-prime">
-                                    {{ ucwords(__('Return to Marrakech')) }}
+                                    {{ ucwords(__(' Camel Ride Along the Coast')) }}
                                 </h3>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After a fulfilling day in Essaouira, you\'ll head back to Marrakech around 8:00 PM. This day trip will leave you with unforgettable memories of Morocco\'s beauty and culture, just a few hours from Marrakech. Enjoy every moment of this unique adventure!')) }}
+                                    {{ ucfirst(__('For a touch of adventure, enjoy a camel ride along Essaouira\'s pristine beach. The experience is not only a highlight for families but also a peaceful way to connect with the natural beauty of the area.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-prime">
+                                    {{ ucwords(__('Explore the Jewish Quarter')) }}
+                                </h3>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('History enthusiasts can visit the Jewish quarter, or Mellah, a testament to Essaouira\'s multicultural heritage. Here, you\'ll uncover centuries-old synagogues and learn about the city\'s Jewish community, once an integral part of its cultural fabric.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-prime">
+                                    {{ ucwords(__('Return to Marrakech: Memories to Cherish')) }}
+                                </h3>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('After a day filled with exploration and relaxation, you\'ll begin your journey back to Marrakech around 5:30 PM. With the flexibility of a private tour, you can stop for a break or a final photo op before arriving back at your hotel around 8:00 PM.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-prime">
+                                    {{ ucwords(__('Book Your Private Day Trip to Essaouira Now')) }}
+                                </h3>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('This private excursion to Essaouira offers a perfect escape from Marrakech, tailored just for you. Whether you\'re a history buff, a food lover, or simply seeking relaxation by the sea, this journey promises a day filled with unforgettable experiences.')) }}
+                                </p>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Let the magic of Essaouira captivate your heart. Book now for a private adventure that will leave you with cherished memories!')) }}
                                 </p>
                             </div>
                         </div>

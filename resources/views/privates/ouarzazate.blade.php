@@ -1,12 +1,130 @@
 @extends('shared.guest.base')
-@section('title',
-    ucwords(__('Private Excursion to Ouarzazate and Ait Ben Haddou from Marrakech')) .
-    ' | ' .
-    __('Morocco
-    Adventure City'))
-    @php
-        Core::$route = 2;
-    @endphp
+@section('title', ucwords(__('Private Ouarzazate Desert Tour From Marrakech')))
+@php
+    Core::$route = 2;
+@endphp
+
+@section('meta')
+    <!-- Meta Descriptions -->
+    <meta name="description" content="{!! __(
+        'Experience a private Ouarzazate desert tour from Marrakech. Visit Ait Ben Haddou, explore Atlas Film Studios, and enjoy the stunning Atlas Mountains in comfort.',
+    ) !!}">
+    <meta property="og:description" content="{!! __(
+        'Experience a private Ouarzazate desert tour from Marrakech. Visit Ait Ben Haddou, explore Atlas Film Studios, and enjoy the stunning Atlas Mountains in comfort.',
+    ) !!}">
+    <meta name="twitter:description" content="{!! __(
+        'Experience a private Ouarzazate desert tour from Marrakech. Visit Ait Ben Haddou, explore Atlas Film Studios, and enjoy the stunning Atlas Mountains in comfort.',
+    ) !!}">
+    <!-- Meta Titles -->
+    <meta property="og:title" content="{{ __('Morocco Adventure City') }}">
+    <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
+
+    <!-- Meta Images -->
+    <meta property="og:image" content="{{ asset('img/ouarzazate/ouarzazate-1') }}">
+    <meta name="twitter:image" content="{{ asset('img/ouarzazate/ouarzazate-1') }}">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "{{ __('Private Ouarzazate Desert Tour From Marrakech') }}",
+  "description": "{{ __('Experience a private day trip to Ouarzazate and Ait Ben Haddou from Marrakech. Visit the iconic Kasbah, explore Atlas Film Studios, and enjoy breathtaking Atlas Mountain views.') }}",
+  "image": [
+    "{{ asset('img/ouarzazate/ouarzazate-1.webp') }}",
+    "{{ asset('img/ouarzazate/ouarzazate-2.webp') }}",
+    "{{ asset('img/ouarzazate/ouarzazate-3.webp') }}"
+  ],
+  "touristType": "{{ __('Culture Enthusiasts, Film Lovers, Adventure Seekers') }}",
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Begin your journey at 7:00 AM, traveling through the Atlas Mountains via the Tichka Pass.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ __('Visit Ait Ben Haddou Kasbah') }}",
+        "description": "{{ __('Explore the UNESCO-listed Kasbah, a historical fortress made of clay and stone.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ __('Discover Ouarzazate') }}",
+        "description": "{{ __('Visit the Atlas Film Studios and the historic Taourirt Kasbah in Ouarzazate.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('Enjoy the scenic drive back through the Atlas Mountains, arriving by 8:00 PM.') }}"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "160",
+      "description": "{{ __('Price for 2 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "190",
+      "description": "{{ __('Price for 7 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 7
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "200",
+      "description": "{{ __('Price for 16 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 16
+      }
+    }
+  ],
+  "provider": {
+    "@type": "TouristInformationCenter",
+    "name": "{{ __('Morocco Adventure City') }}",
+    "url": "{{ route('views.guest.index') }}",
+    "logo": "{{ asset('img/logo.png') }}",
+    "sameAs": [
+      "https://www.facebook.com/moroccoadventurecity",
+      "https://www.instagram.com/moroccoadventurecity",
+      "https://twitter.com/moroccoadventurecity"
+    ],
+    "telephone": "{{ env('APP_PHONE_NUMBER') }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ env('APP_EMAIL_ADDRESS') }}",
+      "addressLocality": "Marrakech",
+      "addressRegion": "Marrakech-Safi",
+      "postalCode": "40000",
+      "addressCountry": "MA"
+    }
+  },
+  "duration": "P1D",
+  "startDate": "{{ now()->toIso8601String() }}",
+  "endDate": "{{ now()->toIso8601String() }}"
+}
+</script>
+
+@endsection
+
+
 @section('content')
     @include('shared.guest.topbar', [
         'title' => __('Private Excursion to Ouarzazate and Ait Ben Haddou from Marrakech'),
@@ -18,7 +136,7 @@
             <div class="lg:col-span-2 flex flex-col gap-10">
                 <div class="flex flex-col gap-4">
                     @include('shared.guest.slider', [
-                        'alt' => 'ouarzazate trip image',
+                        'alt' => __('ouarzazate trip image'),
                         'img' => [
                             asset('img/ouarzazate/ouarzazate-1.webp'),
                             asset('img/ouarzazate/ouarzazate-2.webp'),
@@ -103,41 +221,61 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
                             <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Explore Ait Ben Haddou Kasbah and Ouarzazate from Marrakech')) }}
+                                {{ ucwords(__('Private Ait Ben Haddou and Ouarzazate Tour From Marrakech: A Journey Through History')) }}
                             </h3>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
                                     {{ ucwords(__('Early Morning Departure from Marrakech')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your adventure day starts early, around 7 o\'clock in the morning, from the beautiful city of Marrakech. You\'re about to travel 180 kilometers through the majestic Atlas Mountains via the Tichka Pass. The journey promises breathtaking landscapes, and a fascinating destination awaits you.')) }}
+                                    {{ ucfirst(__('Your private journey begins bright and early at 7:00 AM. With your personal driver, you\'ll travel 180 kilometers through the majestic Atlas Mountains via the Tichka Pass. As the sun rises, the winding roads reveal panoramic views of rugged cliffs, lush valleys, and traditional Berber villages. Every turn of the road feels like stepping into a postcard.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Ait Ben Haddou Kasbah: A Historical Treasure')) }}
+                                    {{ ucwords(__('Explore Ait Ben Haddou: A UNESCO Heritage Site')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your first stop takes you to the Ait Ben Haddou Kasbah, a complex of clay and stone surrounded by imposing walls and monumental gates. Inside this fortress, you\'ll discover a collection of beautifully crafted homes and buildings. This site is one of the gems of southern Morocco and has been proclaimed a UNESCO World Heritage Site. You\'ll immerse yourself in the history and culture of this iconic region.')) }}
+                                    {{ ucfirst(__('Your first stop is the iconic Ait Ben Haddou Kasbah, a stunning clay and stone fortress that transports you to another era. Surrounded by towering walls, this UNESCO World Heritage Site boasts an intricate collection of homes and buildings that whisper stories of the past. As you wander through its narrow alleys, you\'ll feel the echoes of history in every corner. Ait Ben Haddou is not just a historical gem—it\'s a living testament to Morocco\'s cultural richness.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Discover Ouarzazate, the Hollywood of Africa')) }}
+                                    {{ ucwords(__('Ouarzazate: Where Culture Meets Cinema')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After this journey into history, you\'ll continue your adventure to reach the city of Ouarzazate, nicknamed the \'Hollywood of Africa\'. This city is famous for its film studios, where many cinematic masterpieces were born. You\'ll have the opportunity to visit these studios, walk in the footsteps of movie stars, and learn more about the Moroccan film industry.')) }}
+                                    {{ ucfirst(__('Next, the journey continues to Ouarzazate, a city that perfectly blends tradition with cinematic glamour. Known as the “Hollywood of Africa,” it\'s home to the world-famous Atlas Film Studios. Stroll through the impressive sets of blockbuster hits, and learn how Morocco\'s landscapes have captured the imagination of filmmakers worldwide.')) }}
+                                </p>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('While in Ouarzazate, you can also visit the historic Taourirt Kasbah, a magnificent example of southern Moroccan architecture that adds yet another layer to the city\'s allure.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Return to Marrakech in Beauty')) }}
+                                    {{ ucwords(__('Scenic Return to Marrakech')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
                                     {{ ucfirst(__('After a day filled with discoveries, your excursion will come to an end, and you\'ll begin the return journey to Marrakech. You\'ll have the opportunity to admire the last rays of the sun as you return, arriving around 8:00 PM.')) }}
                                 </p>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The excursion to the Ait Ben Haddou Kasbah and Ouarzazate from Marrakech promises an exceptional cultural and historical experience. Book now to explore these Moroccan treasures and create unforgettable memories.')) }}
+                                    {{ ucfirst(__('After a day of exploration and wonder, it\'s time to relax as you head back to Marrakech. Watch the sun dip below the Atlas Mountains, casting a golden glow on the landscape. Your private tour concludes with your arrival back in the city around 8:00 PM, leaving you with memories of a day well spent.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Why Choose This Private Tour?')) }}
+                                </h4>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Tailored Just for You: This private tour is designed to fit your preferences, allowing you to explore at your own pace with personalized stops and insights. Unlike group tours, every detail is customized to ensure a seamless and enjoyable experience.')) }}
+                                </p>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Exclusive Comfort: Travel in the luxury of a private vehicle with a dedicated driver who ensures your journey is as comfortable as it is convenient. No sharing, no rush—just you and your chosen companions enjoying a stress-free adventure.')) }}
+                                </p>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Private Access to Iconic Sites: Dive deep into the rich culture and cinematic history of Morocco with exclusive attention from your guide. Discover the beauty of Ait Ben Haddou and Ouarzazate without the distractions of a crowded tour.')) }}
+                                </p>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Breathtaking Private Moments: Marvel at the untouched landscapes of the Atlas Mountains and southern Morocco in tranquility. Every stop is yours to savor, every view yours to admire.')) }}
                                 </p>
                             </div>
                         </div>

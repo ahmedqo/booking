@@ -1,12 +1,193 @@
 @extends('shared.guest.base')
-@section('title', ucwords(__('4 Days / 3 Nights Private Excursion to Zagora & Merzouga Desert from Marrakech')) . ' | '
-    . __('Morocco Adventure City'))
-    @php
-        Core::$route = 2;
-    @endphp
+@section('title', ucwords(__('4-Day Private Desert Tour From Marrakech to Merzouga')))
+@php
+    Core::$route = 2;
+@endphp
+@section('meta')
+    <!-- Meta Descriptions -->
+    <meta name="description" content="{!! __(
+        'Explore Morocco on a 4-day desert tour from Marrakech to Merzouga. Visit Ait Ben Haddou, Dades Gorges, Erg Chebbi, and enjoy camel rides & starlit bivouacs.',
+    ) !!}">
+    <meta property="og:description" content="{!! __(
+        'Explore Morocco on a 4-day desert tour from Marrakech to Merzouga. Visit Ait Ben Haddou, Dades Gorges, Erg Chebbi, and enjoy camel rides & starlit bivouacs.',
+    ) !!}">
+    <meta name="twitter:description" content="{!! __(
+        'Explore Morocco on a 4-day desert tour from Marrakech to Merzouga. Visit Ait Ben Haddou, Dades Gorges, Erg Chebbi, and enjoy camel rides & starlit bivouacs.',
+    ) !!}">
+    <!-- Meta Titles -->
+    <meta property="og:title" content="{{ __('Morocco Adventure City') }}">
+    <meta name="twitter:title" content="{{ __('Morocco Adventure City') }}">
+
+    <!-- Meta Images -->
+    <meta property="og:image" content="{{ asset('img/merzouga/merzouga-1.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/merzouga/merzouga-1.webp') }}">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "{{ __('4-Day Private Desert Tour From Marrakech to Merzouga') }}",
+  "description": "{{ __('Explore Morocco on a 4-day desert tour from Marrakech to Merzouga. Visit Ait Ben Haddou, Dades Gorges, Erg Chebbi, and enjoy camel rides & starlit bivouacs.') }}",
+  "image": [
+    "{{ asset('img/merzouga/merzouga-1.webp') }}",
+    "{{ asset('img/zagora/zagora-1.webp') }}",
+    "{{ asset('img/merzouga/merzouga-2.webp') }}",
+    "{{ asset('img/zagora/zagora-2.webp') }}",
+    "{{ asset('img/merzouga/merzouga-3.webp') }}"
+  ],
+  "touristType": "{{ __('Adventure Seekers, Culture Enthusiasts, Desert Lovers') }}",
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ __('Departure from Marrakech') }}",
+        "description": "{{ __('Start your journey with a scenic drive through the Atlas Mountains and the Tichka Pass.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ __('Ait Ben Haddou Kasbah') }}",
+        "description": "{{ __('Explore the historic UNESCO World Heritage site and its iconic mud-brick architecture.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ __('Camel Ride and Bivouac in Zagora') }}",
+        "description": "{{ __('Enjoy a camel ride to a desert camp in Zagora and spend the night under a starry sky.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "{{ __('Exploration in Ouarzazate') }}",
+        "description": "{{ __('Visit the 'Hollywood of Africa' and its film studios or take time to explore the city.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "{{ __('Todra and Dades Gorges') }}",
+        "description": "{{ __('Marvel at the dramatic canyon walls of Todra Gorges and the serene landscapes of Dades Gorges.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "{{ __('Erg Chebbi and Merzouga Desert') }}",
+        "description": "{{ __('Experience the mesmerizing dunes of Erg Chebbi with a sunset camel ride and a magical bivouac stay.') }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "{{ __('Return to Marrakech') }}",
+        "description": "{{ __('Travel back through the Valley of Roses and Ouarzazate, crossing the Tichka Pass back to Marrakech.') }}"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "600",
+      "description": "{{ __('Price for 2 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "700",
+      "description": "{{ __('Price for 3 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 3
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "800",
+      "description": "{{ __('Price for 4 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 4
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "900",
+      "description": "{{ __('Price for 5 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 5
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "1000",
+      "description": "{{ __('Price for 6 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 6
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "1980",
+      "description": "{{ __('Price for 7 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 7
+      }
+    },
+    {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "2080",
+      "description": "{{ __('Price for 8 persons') }}",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 8
+      }
+    }
+  ],
+  "provider": {
+    "@type": "TouristInformationCenter",
+    "name": "{{ __('Morocco Adventure City') }}",
+    "url": "{{ route('views.guest.index') }}",
+    "logo": "{{ asset('img/logo.png') }}",
+    "sameAs": [
+      "https://www.facebook.com/moroccoadventurecity",
+      "https://www.instagram.com/moroccoadventurecity",
+      "https://twitter.com/moroccoadventurecity"
+    ],
+    "telephone": "{{ env('APP_PHONE_NUMBER') }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ env('APP_EMAIL_ADDRESS') }}",
+      "addressLocality": "Marrakech",
+      "addressRegion": "Marrakech-Safi",
+      "postalCode": "40000",
+      "addressCountry": "MA"
+    }
+  },
+  "duration": "P4D",
+  "startDate": "{{ now()->toIso8601String() }}",
+  "endDate": "{{ now()->addDays(4)->toIso8601String() }}"
+}
+</script>
+
+
+
+@endsection
+
+
 @section('content')
     @include('shared.guest.topbar', [
-        'title' => __('4 Days / 3 Nights Private Excursion to Zagora & Merzouga Desert from Marrakech'),
+        'title' => __('Epic 4-Day - 3 Nights Excursion From Marrakech to Merzouga'),
         'start' => [route('views.guest.private'), __('Private Excursions')],
         'end' => __('Excursions'),
     ])
@@ -15,7 +196,7 @@
             <div class="lg:col-span-2 flex flex-col gap-10">
                 <div class="flex flex-col gap-4">
                     @include('shared.guest.slider', [
-                        'alt' => 'zagora & merzouga trip image',
+                        'alt' => __('zagora & merzouga trip image'),
                         'img' => [
                             asset('img/merzouga/merzouga-1.webp'),
                             asset('img/zagora/zagora-1.webp'),
@@ -70,13 +251,13 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Duration 4 Days / 3 Nights'),
-                                __('Departure at 07:00 & Return at 20:00'),
-                                __('Printed or mobile confirmation vouchers are accepted'),
-                                __('Immediate confirmation'),
+                                __('Duration: 4 Days / 3 Nights'),
+                                __('Departure: 7:00 AM | Return: 8:00 PM'),
+                                __('Accepted: Printed or mobile confirmation vouchers'),
+                                __('Instant booking confirmation'),
                                 __(
-                                    'Pick-up from your hotel or Riad in Marrakech. If your Riad is located in the Medina, pick-up will be arranged at a nearby accessible location, as close as possible to your Riad or Hotel'),
-                                __('Free cancellation'),
+                                    'Hotel or Riad pick-up in Marrakech included. For Medina locations, pick-up will be arranged at the nearest accessible spot.'),
+                                __('Free cancellation available'),
                             ],
                         ])
                     </div>
@@ -88,12 +269,15 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         @include('shared.guest.list', [
                             'list' => [
-                                __('Behold the stunning landscapes of the Atlas Mountains and the Tichka Pass'),
-                                __('Enjoy camel rides through the desert'),
-                                __('Spend two nights in a desert camp under a beautiful, starry sky'),
                                 __(
-                                    'Discover the magnificent Kasbah of Ait Ben Haddou, Ouarzazate, Zagora, Merzouga...'),
-                                __('Explore the town of Zagora, Dades Gorges, Rose Valley,...'),
+                                    'Atlas Mountains: Traverse the scenic Tichka Pass and enjoy unparalleled views.'),
+                                __('Ait Ben Haddou Kasbah: Step back in time at this UNESCO World Heritage site.'),
+                                __(
+                                    'Ouarzazate: Discover the cultural and cinematic history of the “Hollywood of Africa.”'),
+                                __('Todra Gorges: Marvel at towering canyon walls carved by nature.'),
+                                __('Erg Chebbi: Experience the mesmerizing dunes of the Merzouga desert.'),
+                                __('Camel Rides: Enjoy serene treks through golden sands.'),
+                                __('Desert Bivouacs: Spend magical nights under a starry sky.'),
                             ],
                         ])
                     </div>
@@ -105,109 +289,123 @@
                     <div class="border border-x-shade rounded-x-huge p-6">
                         <div class="flex flex-col gap-6">
                             <p class="text-x-black text-lg font-normal">
-                                {{ ucfirst(__('Epic 4-Day Excursion from Marrakech to Merzouga: Discovering Morocco.')) }}
+                                {{ ucfirst(__('Epic 4-Day - 3 nights Excursion From Marrakech to Merzouga: A Journey Through Morocco\'s Hidden Gems')) }}
                             </p>
                             <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Day 01: Marrakech – Zagora')) }}
+                                {{ ucwords(__('Day 1: From Marrakech to Zagora – A Gateway to the Desert')) }}
                             </h3>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('A Memorable Departure from Marrakech')) }}
+                                    {{ ucwords(__('The Journey Begins')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your adventure begins in the beautiful city of Marrakech. You are about to embark on an unforgettable journey. You will leave the city by crossing the Tichka Pass, located at an impressive altitude of 2260 meters.')) }}
+                                    {{ ucfirst(__('Your adventure kicks off in the vibrant city of Marrakech. Leaving behind the bustling streets, you\'ll traverse the Tichka Pass, a breathtaking mountain pass perched at an altitude of 2,260 meters. The scenic drive offers a feast for the eyes, with panoramic views of the majestic Atlas Mountains.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Exploration of the Ait Ben Haddou Kasbah')) }}
+                                    {{ ucwords(__('Ait Ben Haddou Kasbah – A Step Back in Time')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your first stop takes you to the famous Ait Ben Haddou Kasbah, a UNESCO World Heritage site. This fortified mud-brick fortress surrounded by imposing walls and majestic gates is a historical treasure.')) }}
+                                    {{ ucfirst(__('Your first stop is the iconic Ait Ben Haddou Kasbah, a UNESCO World Heritage site. This ancient, fortified village boasts mud-brick structures that tell stories of a time long past. As you wander through its winding alleys, you\'ll feel like you\'ve stepped onto the set of a Hollywood blockbuster.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Lunch in Ouarzazate and Head to Zagora')) }}
+                                    {{ ucwords(__('Sunset Camel Ride and Desert Bivouac')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After the Kasbah visit, you\'ll head to Ouarzazate for a delicious lunch. The next leg of the journey takes you through the stunning Draa Valley, offering breathtaking landscapes. Your final destination is Zagora.')) }}
+                                    {{ ucfirst(__('As the sun dips below the horizon, you\'ll embark on a 1.5-hour camel ride through golden dunes. Arriving at your desert bivouac, you\'ll be treated to a magical evening under a canopy of stars. Dinner and traditional hospitality make this a night to remember.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="font-x-huge text-xl text-x-black">
+                                    {{ ucwords(__('Day 2: From Zagora to Dades Gorges – A Journey Through Morocco\'s Beauty')) }}
+                                </h3>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Wake up early to witness the breathtaking sunrise over the dunes. After a light breakfast, you\'ll return to Zagora by camel, reliving the tranquility of the desert once more.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Camel Ride and Starry Night')) }}
+                                    {{ ucwords(__('Free Exploration in Ouarzazate')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After a 1.5-hour camel ride, you will reach the Bivouac. There, you\'ll have the opportunity to admire a beautiful desert sunset and spend the night under a clear sky, filled with sparkling stars. (Half-board)')) }}
+                                    {{ ucfirst(__('Back in Ouarzazate, you\'ll have 2.5 hours of free time to explore the city. Whether it\'s visiting the renowned film studios or simply soaking in the ambiance, the choice is yours.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Through Tinghir and the Todra Gorges')) }}
+                                </h4>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Your journey continues through the Valley of a Thousand Kasbahs, passing picturesque towns like Erfoud and Tinghir. One of the highlights is the Todra Gorges, where towering canyon walls create a dramatic natural wonder.')) }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Arrival at Dades Gorges')) }}
+                                </h4>
+                                <p class="text-x-black text-lg font-normal">
+                                    {{ ucfirst(__('Your day concludes at the stunning Dades Gorges, where unique rock formations and a serene atmosphere provide the perfect backdrop for a restful evening. Dinner and an overnight stay at a local hotel complete your day.')) }}
                                 </p>
                             </div>
                             <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Day 02: Zagora – Dades Gorges')) }}
+                                {{ ucwords(__('Day 3: From Dades Gorges to Merzouga – Into the Heart of the Desert')) }}
                             </h3>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Magical Sunrise and Return to Zagora')) }}
+                                    {{ ucwords(__('Scenic Route to Merzouga')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The day begins with the admiration of the sunrise, followed by a 1.5-hour camel ride back to the minibuses.')) }}
+                                    {{ ucfirst(
+                                        __(
+                                            'Your third day begins with a scenic drive through Nkoub and Tazzarine, where you\'ll stop for lunch. As you approach Merzouga, the landscape transforms into the mesmerizing dunes of Erg Chebbi, marking your entry into the Merzouga desert.',
+                                        ),
+                                    ) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Stop in Ouarzazate and Free Stroll')) }}
+                                    {{ ucwords(__('Camel Ride and Starry Night in a Desert Bivouac')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('You will make a stop in Ouarzazate, where you\'ll have 2.5 hours of free time to explore this city nicknamed the \'Hollywood of Africa\' due to its film studios. There will also be a minibus change.')) }}
-                                </p>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Head to the Dades Gorges')) }}
-                                </h4>
-                                <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('Your next destination will take you to the Dades Gorges. You will pass through Erfoud, Tinghir, the Todra Gorges, and the Valley of a Thousand Kasbahs before finally reaching the Dades Gorges, where you will spend the night at the hotel with half-board.')) }}
+                                    {{ ucfirst(__('As the sun sets, you\'ll embark on another camel ride, this time to your desert camp. The serene beauty of the Merzouga desert excursion is unmatched, and you\'ll spend the night under a star-filled sky, enjoying a traditional dinner and the warm hospitality of the desert.')) }}
                                 </p>
                             </div>
                             <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Day 03: Dades Gorges – Merzouga')) }}
+                                {{ ucwords(__('Day 4: From Merzouga to Marrakech – A Farewell to the Desert')) }}
                             </h3>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Heading to Merzouga Through Breathtaking Landscapes')) }}
+                                    {{ ucwords(__('Sunrise Over the Dunes')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('You\'ll hit the road towards Merzouga passing through Nkoub, Tazzarine (where you\'ll have lunch), Rissani, the Tafilalet Oasis, ultimately reaching Erg Chebbi.')) }}
+                                    {{ ucfirst(__('Start your final day with the magical sight of the sunrise illuminating the dunes. After breakfast, it\'s time to bid farewell to the desert.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Camel Adventure and Night in a Bivouac')) }}
+                                    {{ ucwords(__('Scenic Return to Marrakech')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('After a camel ride to admire the sunset, you will arrive at your desert bivouac. There, you will spend a magical night under a starry sky. (Dinner on site)')) }}
-                                </p>
-                            </div>
-                            <h3 class="font-x-huge text-xl text-x-black">
-                                {{ ucwords(__('Day 04: Merzouga – Marrakech')) }}
-                            </h3>
-                            <div class="flex flex-col gap-2">
-                                <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Admiring the Sunrise and Breakfast')) }}
-                                </h4>
-                                <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('The day begins with admiring the sunrise and enjoying a delicious breakfast.')) }}
+                                    {{ ucfirst(__('The return journey to Marrakech is just as enchanting. You\'ll pass through the Valley of Roses and Kalaat M\'gouna, where vibrant blooms add a pop of color to the arid landscape. A stop in Ouarzazate allows you to explore the Kasbah and film studios one last time before crossing the Tichka Pass back to Marrakech.')) }}
                                 </p>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <h4 class="font-x-thin text-xl text-x-prime">
-                                    {{ ucwords(__('Return to Marrakech via a Scenic Route')) }}
+                                    {{ ucwords(__('Why Choose This 4-Day Excursion?')) }}
                                 </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('You\'ll take the return route to Marrakech passing through Kalaat M’gouna, the Valley of Roses, Ouarzazate (where you\'ll visit the Kasbah of the city and the film studios if time permits). You\'ll have lunch there before crossing the Tichka Pass to finally reach Marrakech.')) }}
+                                    {{ ucfirst(__('This excursion from Marrakech to Merzouga offers an immersive journey through Morocco’s cultural and natural wonders. Whether it’s the timeless allure of the Merzouga desert, the historic charm of Ait Ben Haddou, or the dramatic landscapes of the Dades and Todra Gorges, every moment is designed to captivate your senses.')) }}
                                 </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="font-x-thin text-xl text-x-prime">
+                                    {{ ucwords(__('Book Your Adventure Today')) }}
+                                </h4>
                                 <p class="text-x-black text-lg font-normal">
-                                    {{ ucfirst(__('This 4-day excursion from Marrakech to Merzouga is a true adventure through majestic landscapes, historical treasures, and the magic of the Moroccan desert. Book now to experience an unforgettable journey.')) }}
+                                    {{ ucfirst(__('This 4-day excursion from Marrakech to Merzouga is more than a trip it\'s an adventure that will leave you with memories to last a lifetime. From the bustling streets of Marrakech to the tranquil dunes of Merzouga, this journey offers a glimpse into Morocco\'s soul. Don\'t wait—book now and let the magic of the desert captivate you!')) }}
                                 </p>
                             </div>
                         </div>
