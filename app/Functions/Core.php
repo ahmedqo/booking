@@ -170,13 +170,13 @@ class Core
                 'url' => route('views.excursions.historical'),
             ],
             (object) [
-                'image' => asset('img/excursions/majorelle-gardens-and-souks.webp'),
-                'title' => __('Majorelle & Souks'),
+                'image' => asset('img/excursions/medina-and-souks.webp'),
+                'title' => __('Medina and Souks'),
                 'desc' => __('Exploring the Majorelle Gardens and the bustling souks of Marrakech'),
                 'price' => '20',
                 'time' => '1 ' . __('day'),
                 'hours' => 24,
-                'url' => route('views.excursions.majorelle'),
+                'url' => route('views.excursions.medina'),
             ],
             (object) [
                 'image' => asset('img/excursions/ouarzazate-trip.webp'),

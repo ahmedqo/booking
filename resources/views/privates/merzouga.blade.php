@@ -53,7 +53,7 @@
         "@type": "ListItem",
         "position": 3,
         "name": "{{ __('Lunch in Ouarzazate') }}",
-        "description": "{{ __('Enjoy a delicious meal in the 'Gateway to the Desert,' surrounded by iconic film studios.') }}"
+        "description": "{{ __('Enjoy a delicious meal in the \'Gateway to the Desert,\' surrounded by iconic film studios.') }}"
       },
       {
         "@type": "ListItem",

@@ -60,7 +60,7 @@
         "@type": "ListItem",
         "position": 4,
         "name": "{{ __('Exploration in Ouarzazate') }}",
-        "description": "{{ __('Visit the 'Hollywood of Africa' and its film studios or take time to explore the city.') }}"
+        "description": "{{ __('Visit the \'Hollywood of Africa\' and its film studios or take time to explore the city.') }}"
       },
       {
         "@type": "ListItem",

@@ -52,7 +52,7 @@
         "@type": "ListItem",
         "position": 3,
         "name": "{{ __('Lunch in Ouarzazate') }}",
-        "description": "{{ __('Enjoy a delicious meal in the 'Hollywood of Africa,' surrounded by iconic film studios.') }}"
+        "description": "{{ __('Enjoy a delicious meal in the \'Hollywood of Africa,\' surrounded by iconic film studios.') }}"
       },
       {
         "@type": "ListItem",

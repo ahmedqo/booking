@@ -10,6 +10,7 @@ Neo.load(function() {
         },
         allDaySlot: false,
         events: $core.search,
+        locale: document.documentElement.lang,
         datesSet: function(info) {
             const prev = document.querySelector(".fc-prev-button"),
                 next = document.querySelector(".fc-next-button");

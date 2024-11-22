@@ -36,8 +36,8 @@ foreach ([
         'slug' => 'marrakech-historical-visit',
         'view' => 'historical',
     ], [
-        'slug' => 'majorelle-gardens-and-souks',
-        'view' => 'majorelle',
+        'slug' => 'medina-and-souks',
+        'view' => 'medina',
     ], [
         'slug' => 'chez-ali-trip',
         'view' => 'ali',

@@ -52,7 +52,7 @@
         "@type": "ListItem",
         "position": 3,
         "name": "{{ __('Explore the Medina') }}",
-        "description": "{{ __('Discover Essaouira's vibrant Medina with narrow alleys, art galleries, and boutique shops at your own pace.') }}"
+        "description": "{{ __('Discover Essaouira\'s vibrant Medina with narrow alleys, art galleries, and boutique shops at your own pace.') }}"
       },
       {
         "@type": "ListItem",
@@ -70,13 +70,13 @@
         "@type": "ListItem",
         "position": 6,
         "name": "{{ __('Optional Camel Ride') }}",
-        "description": "{{ __('Take a peaceful camel ride along Essaouira's beach, a unique way to enjoy the coastal scenery.') }}"
+        "description": "{{ __('Take a peaceful camel ride along Essaouira\'s beach, a unique way to enjoy the coastal scenery.') }}"
       },
       {
         "@type": "ListItem",
         "position": 7,
         "name": "{{ __('Explore the Jewish Quarter') }}",
-        "description": "{{ __('Discover the history and culture of Essaouira's Jewish quarter, including centuries-old synagogues.') }}"
+        "description": "{{ __('Discover the history and culture of Essaouira\'s Jewish quarter, including centuries-old synagogues.') }}"
       },
       {
         "@type": "ListItem",
